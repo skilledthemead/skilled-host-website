@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="210" viewBox="0 0 1200 210">
+  <rect width="1200" height="210" rx="24" fill="#101828"/>
+  <circle cx="1015" cy="-120" r="260" fill="#F97316" opacity="0.10"/>
+  <circle cx="1135" cy="205" r="205" fill="#14B8A6" opacity="0.10"/>
+  
+<g transform="translate(58,50)">
+  <rect x="0" y="0" width="88" height="88" rx="22" fill="#FFF7ED"/>
+  <path d="M26 27h50" stroke="#F97316" stroke-width="12" stroke-linecap="round"/>
+  <path d="M17 44h59" stroke="#101828" stroke-width="12" stroke-linecap="round"/>
+  <path d="M26 61h50" stroke="#14B8A6" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="76" cy="44" r="5.5" fill="#1677FF"/>
+</g>
+<text x="168" y="111" font-family="Inter, Montserrat, Arial, Helvetica, sans-serif" font-size="54" font-weight="850" fill="#FFFFFF" letter-spacing="-1.8">Skilled</text>
+<text x="367" y="111" font-family="Inter, Montserrat, Arial, Helvetica, sans-serif" font-size="54" font-weight="850" fill="#F97316" letter-spacing="-1.8">Host</text>
+
+  <rect x="58" y="154" width="1084" height="1" fill="#263244"/>
+  <text x="58" y="184" font-family="Inter, Montserrat, Arial, Helvetica, sans-serif" font-size="16" font-weight="650" fill="#CBD5E1" letter-spacing="1.1">HOSTING • DOMAINS • BUSINESS EMAIL • SSL</text>
+</svg>
