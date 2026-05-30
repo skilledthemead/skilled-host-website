@@ -57,14 +57,23 @@ function applyLanguage(lang) {
   localStorage.setItem("skilledHostLang", lang);
 
   document.querySelectorAll("[data-en][data-ar]").forEach((element) => {
-    element.textContent = element.getAttribute(`data-${lang}`);
+    const text = element.getAttribute(`data-${lang}`);
+
+    if (text) {
+      element.textContent = text;
+    }
   });
 
   document.querySelectorAll("[data-placeholder-en][data-placeholder-ar]").forEach((element) => {
-    element.setAttribute("placeholder", element.getAttribute(`data-placeholder-${lang}`));
+    const placeholder = element.getAttribute(`data-placeholder-${lang}`);
+
+    if (placeholder) {
+      element.setAttribute("placeholder", placeholder);
+    }
   });
 
   updateControlLabels();
+  closeAllMegaMenus();
 }
 
 function closeAllMegaMenus() {
@@ -127,27 +136,23 @@ navItems.forEach((item) => {
 
   if (trigger) {
     trigger.addEventListener("click", (event) => {
-      if (window.innerWidth <= 980) {
-        event.preventDefault();
+      event.preventDefault();
 
-        const isAlreadyOpen = item.classList.contains("is-active");
+      const isAlreadyOpen = item.classList.contains("is-active");
 
-        closeAllMegaMenus();
+      closeAllMegaMenus();
 
-        if (!isAlreadyOpen) {
-          item.classList.add("is-active");
-        }
+      if (!isAlreadyOpen) {
+        item.classList.add("is-active");
       }
     });
   }
 });
 
-document.addEventListener("mousemove", (event) => {
-  if (window.innerWidth <= 980) return;
+document.addEventListener("click", (event) => {
+  const clickedInsideHeader = event.target.closest(".site-header");
 
-  const isInsideHeader = event.target.closest(".site-header");
-
-  if (!isInsideHeader) {
+  if (!clickedInsideHeader) {
     closeAllMegaMenus();
   }
 });
@@ -155,18 +160,20 @@ document.addEventListener("mousemove", (event) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeAllMegaMenus();
+
+    if (siteHeader && mobileMenuButton) {
+      siteHeader.classList.remove("is-open");
+      mobileMenuButton.setAttribute("aria-expanded", "false");
+    }
   }
 });
 
 window.addEventListener("resize", () => {
   closeAllMegaMenus();
 
-  if (window.innerWidth > 980 && siteHeader) {
+  if (window.innerWidth > 980 && siteHeader && mobileMenuButton) {
     siteHeader.classList.remove("is-open");
-
-    if (mobileMenuButton) {
-      mobileMenuButton.setAttribute("aria-expanded", "false");
-    }
+    mobileMenuButton.setAttribute("aria-expanded", "false");
   }
 });
 
