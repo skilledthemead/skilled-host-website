@@ -177,8 +177,32 @@ window.addEventListener("resize", () => {
   }
 });
 
+/* =========================================================
+   DOMAIN SEARCH REDIRECT
+   Sends domain searches to Skilled Host HostShop domain search
+   ========================================================= */
+
 domainForms.forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    const input = form.querySelector('input[name="domain"]');
+    const rawDomain = input ? input.value.trim() : "";
+
+    if (!rawDomain) {
+      if (input) {
+        input.focus();
+      }
+
+      return;
+    }
+
+    const cleanDomain = rawDomain
+      .replace(/^https?:\/\//i, "")
+      .replace(/^www\./i, "")
+      .replace(/\s+/g, "")
+      .toLowerCase();
+
+    window.location.href = `https://cp.skilledhost.com/domain-search?domain=${encodeURIComponent(cleanDomain)}`;
   });
 });
