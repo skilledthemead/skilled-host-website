@@ -786,29 +786,49 @@ html[data-theme="dark"] .domain-search button:hover {
   font-size: 17px;
 }
 
-
 /* =========================================================
    07) SERVICE CARDS
+   Popular services section
    ========================================================= */
+
+.services-section {
+  background: var(--sh-page);
+}
+
+.services-heading {
+  max-width: 780px;
+}
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
 }
 
 .service-card {
-  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 24px;
   background: var(--sh-surface);
   border: 1px solid var(--sh-border);
   border-radius: var(--sh-radius-md);
   box-shadow: var(--sh-shadow-sm);
-  transition: 0.18s ease;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
 }
 
 .service-card:hover {
   transform: translateY(-2px);
+  border-color: rgba(255, 107, 0, 0.34);
   box-shadow: var(--sh-shadow-md);
+}
+
+.service-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
 }
 
 .service-icon {
@@ -816,14 +836,78 @@ html[data-theme="dark"] .domain-search button:hover {
   align-items: center;
   justify-content: center;
   width: 46px;
+  min-width: 46px;
   height: 46px;
-  margin-bottom: 18px;
   color: var(--sh-navy);
   background: #fff4ec;
   border: 1px solid #ffd8bd;
   border-radius: 14px;
-  font-size: 13px;
+}
+
+.service-svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.service-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 10px;
+  color: var(--sh-muted);
+  background: var(--sh-surface-2);
+  border: 1px solid var(--sh-border);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.service-card p {
+  flex: 1;
+  margin-bottom: 22px;
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+.service-card a {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  color: var(--sh-orange);
+  font-size: 14px;
   font-weight: 900;
+}
+
+.service-card a::after {
+  content: "→";
+  margin-inline-start: 7px;
+  font-size: 15px;
+  line-height: 1;
+}
+
+html[dir="rtl"] .service-card a::after {
+  content: "←";
+  margin-inline-start: 7px;
+}
+
+.service-card a:hover {
+  color: var(--sh-orange-dark);
+}
+
+html[data-theme="dark"] .services-section {
+  background: var(--sh-page);
 }
 
 html[data-theme="dark"] .service-icon {
@@ -832,20 +916,36 @@ html[data-theme="dark"] .service-icon {
   border-color: rgba(255, 107, 0, 0.28);
 }
 
-.service-card p {
-  margin-bottom: 20px;
+html[data-theme="dark"] .service-tag {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: var(--sh-border);
 }
 
-.service-card a {
-  color: var(--sh-orange);
-  font-size: 14px;
-  font-weight: 900;
+@media (max-width: 1080px) {
+  .service-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.service-card a:hover {
-  color: var(--sh-orange-dark);
+@media (max-width: 780px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+@media (max-width: 560px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 22px;
+  }
+
+  .service-card-top {
+    margin-bottom: 16px;
+  }
+}
 
 /* =========================================================
    08) HELP ME CHOOSE
@@ -1555,3 +1655,242 @@ html[data-theme="dark"] .service-icon {
   }
 }
 
+/* =========================================================
+   04.1) HERO SECTION FINAL POLISH
+   Official global hosting hero balance
+   Header/menu remain unchanged
+   ========================================================= */
+
+/* Desktop hero balance */
+@media (min-width: 981px) {
+  .hero-section {
+    padding-top: 96px;
+    padding-bottom: 84px;
+  }
+
+  .hero-grid {
+    align-items: center;
+    gap: 54px;
+  }
+
+  .hero-content {
+    max-width: 680px;
+  }
+
+  .hero-content h1 {
+    max-width: 690px;
+    margin-bottom: 24px;
+  }
+
+  .hero-text {
+    max-width: 620px;
+    margin-bottom: 28px;
+  }
+
+  .hero-actions {
+    margin-bottom: 20px;
+  }
+
+  .domain-card {
+    align-self: center;
+  }
+
+  html[dir="rtl"] .hero-content {
+    max-width: 700px;
+  }
+
+  html[dir="rtl"] .hero-content h1 {
+    max-width: 700px;
+    line-height: 1.12;
+  }
+
+  html[dir="rtl"] .hero-text {
+    max-width: 650px;
+    line-height: 1.8;
+  }
+}
+
+/* Tablet hero balance */
+@media (max-width: 980px) {
+  .hero-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .hero-grid {
+    gap: 36px;
+  }
+
+  .hero-content {
+    max-width: 720px;
+  }
+
+  .hero-content h1 {
+    margin-bottom: 22px;
+  }
+
+  .hero-text {
+    margin-bottom: 26px;
+  }
+}
+
+/* Mobile hero final polish */
+@media (max-width: 680px) {
+  .hero-section {
+    padding-top: 54px;
+    padding-bottom: 58px;
+  }
+
+  .hero-grid {
+    gap: 34px;
+  }
+
+  .eyebrow {
+    margin-bottom: 16px;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .hero-content h1 {
+    margin-bottom: 22px;
+    font-size: clamp(38px, 10.2vw, 46px);
+    line-height: 1.14;
+    letter-spacing: -0.035em;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 28px;
+    font-size: 16px;
+    line-height: 1.72;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    min-height: 54px;
+    justify-content: center;
+  }
+
+  .hero-points {
+    gap: 10px;
+  }
+
+  .hero-points span {
+    min-height: 36px;
+    padding: 7px 12px;
+    font-size: 12.5px;
+  }
+
+  .domain-card {
+    padding: 26px 22px;
+    border-radius: 22px;
+  }
+
+  .domain-card h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .domain-card p {
+    margin-bottom: 22px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .domain-search {
+    gap: 8px;
+  }
+
+  .domain-search input {
+    min-height: 46px;
+  }
+
+  .domain-search button {
+    min-height: 48px;
+  }
+
+  .domain-tags {
+    margin-top: 18px;
+  }
+}
+
+/* Arabic mobile hero balance */
+@media (max-width: 680px) {
+  html[dir="rtl"] .hero-content {
+    text-align: center;
+  }
+
+  html[dir="rtl"] .hero-content h1 {
+    font-size: clamp(34px, 9.2vw, 41px);
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  html[dir="rtl"] .hero-text {
+    max-width: 100%;
+    font-size: 15.5px;
+    line-height: 1.9;
+  }
+
+  html[dir="rtl"] .hero-actions {
+    margin-bottom: 22px;
+  }
+
+  html[dir="rtl"] .hero-points {
+    justify-content: center;
+  }
+
+  html[dir="rtl"] .hero-points span {
+    font-size: 12.5px;
+  }
+
+  html[dir="rtl"] .domain-card {
+    text-align: right;
+  }
+
+  html[dir="rtl"] .domain-card h2,
+  html[dir="rtl"] .domain-card p {
+    text-align: right;
+  }
+}
+
+/* Small mobile safety */
+@media (max-width: 420px) {
+  .hero-section {
+    padding-top: 50px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(34px, 10.4vw, 42px);
+  }
+
+  html[dir="rtl"] .hero-content h1 {
+    font-size: clamp(32px, 9.4vw, 39px);
+  }
+
+  .hero-text {
+    font-size: 15.5px;
+  }
+
+  .domain-card {
+    padding: 24px 20px;
+  }
+}
+
+/* Dark mode hero clarity */
+html[data-theme="dark"] .hero-text,
+html[data-theme="dark"] .domain-card p {
+  color: #c7d2e5;
+}
+
+html[data-theme="dark"] .hero-points span,
+html[data-theme="dark"] .domain-tags span {
+  background: rgba(255, 255, 255, 0.03);
+}
