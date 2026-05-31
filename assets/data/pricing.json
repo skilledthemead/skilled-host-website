@@ -1,0 +1,560 @@
+{
+  "currency": "AED",
+  "priceDisplay": "monthly_equivalent",
+  "defaultTerm": {
+    "months": 36,
+    "label": {
+      "en": "3-year term",
+      "ar": "اشتراك 3 سنوات"
+    },
+    "discountPercent": 15
+  },
+  "availableDiscounts": [
+    {
+      "months": 24,
+      "discountPercent": 10,
+      "label": {
+        "en": "2 years with 10% discount",
+        "ar": "سنتان مع خصم 10%"
+      }
+    },
+    {
+      "months": 36,
+      "discountPercent": 15,
+      "label": {
+        "en": "3 years with 15% discount",
+        "ar": "3 سنوات مع خصم 15%"
+      }
+    }
+  ],
+"billingNote": {
+  "en": "Monthly-equivalent prices are based on the 3-year term. 1-year and 2-year billing terms are also available in HostShop checkout.",
+  "ar": "الأسعار المعروضة هي السعر الشهري التقريبي عند اختيار اشتراك 3 سنوات. تتوفر أيضاً خيارات الدفع السنوي وسنتين داخل صفحة إتمام الطلب في HostShop."
+},
+  "categories": [
+    {
+      "id": "web-hosting",
+      "label": {
+        "en": "Web Hosting",
+        "ar": "استضافة المواقع"
+      },
+      "title": {
+        "en": "Web Hosting Plans",
+        "ar": "خطط استضافة المواقع"
+      },
+      "description": {
+        "en": "Reliable hosting for business websites, landing pages, portfolios and company profiles.",
+        "ar": "استضافة موثوقة لمواقع الشركات والصفحات التعريفية والمعارض الرقمية."
+      },
+      "categoryUrl": "https://cp.skilledhost.com/pccategory?cat=5191",
+      "pageUrl": "/web-hosting",
+      "plans": [
+        {
+          "name": {
+            "en": "Starter",
+            "ar": "Starter"
+          },
+          "priceMonthly": 21,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=29273-1&t=36",
+          "badge": {
+            "en": "Starter",
+            "ar": "بداية"
+          },
+          "features": {
+            "en": [
+              "1 Website",
+              "100GB SSD Web Space",
+              "Unmetered Bandwidth",
+              "5 × 10GB Mailboxes",
+              "Free Wildcard SSL Certificates"
+            ],
+            "ar": [
+              "موقع واحد",
+              "100GB مساحة SSD",
+              "نقل بيانات غير محدود",
+              "5 صناديق بريد 10GB",
+              "شهادات SSL مجانية"
+            ]
+          }
+        },
+        {
+          "name": {
+            "en": "Business",
+            "ar": "Business"
+          },
+          "priceMonthly": 35,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=36509-1-lhr&t=36",
+          "badge": {
+            "en": "Popular",
+            "ar": "الأكثر طلباً"
+          },
+          "features": {
+            "en": [
+              "Up to 5 Websites",
+              "1000GB SSD Web Space",
+              "Unmetered Bandwidth",
+              "20 × 10GB Mailboxes",
+              "Daily Backup Access"
+            ],
+            "ar": [
+              "حتى 5 مواقع",
+              "1000GB مساحة SSD",
+              "نقل بيانات غير محدود",
+              "20 صندوق بريد 10GB",
+              "نسخ احتياطي يومي"
+            ]
+          }
+        },
+        {
+          "name": {
+            "en": "Pro",
+            "ar": "Pro"
+          },
+          "priceMonthly": 50,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=36507-1-lhr&t=36",
+          "badge": {
+            "en": "Growth",
+            "ar": "للنمو"
+          },
+          "features": {
+            "en": [
+              "Up to 10 Websites",
+              "Unlimited SSD Web Space",
+              "50 × 10GB Mailboxes",
+              "SSH Access",
+              "Timeline Backups"
+            ],
+            "ar": [
+              "حتى 10 مواقع",
+              "مساحة SSD غير محدودة",
+              "50 صندوق بريد 10GB",
+              "دخول SSH",
+              "نسخ احتياطي زمني"
+            ]
+          }
+        },
+        {
+          "name": {
+            "en": "Ultimate",
+            "ar": "Ultimate"
+          },
+          "priceMonthly": 70,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=32089-1-lhr&t=36",
+          "badge": {
+            "en": "Advanced",
+            "ar": "متقدمة"
+          },
+          "features": {
+            "en": [
+              "Unlimited Websites",
+              "Unlimited SSD Web Space",
+              "Unlimited 10GB Mailboxes",
+              "Unlimited MySQL Databases",
+              "Advanced Hosting Flexibility"
+            ],
+            "ar": [
+              "مواقع غير محدودة",
+              "مساحة SSD غير محدودة",
+              "صناديق بريد 10GB غير محدودة",
+              "قواعد بيانات MySQL غير محدودة",
+              "مرونة متقدمة للاستضافة"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "wordpress-hosting",
+      "label": {
+        "en": "WordPress",
+        "ar": "ووردبريس"
+      },
+      "title": {
+        "en": "WordPress Hosting Plans",
+        "ar": "خطط استضافة ووردبريس"
+      },
+      "description": {
+        "en": "Optimised hosting for WordPress websites, blogs, company pages and content platforms.",
+        "ar": "استضافة محسّنة لمواقع ووردبريس والمدونات ومواقع الشركات ومنصات المحتوى."
+      },
+      "categoryUrl": "https://cp.skilledhost.com/pccategory?cat=5193",
+      "pageUrl": "/wordpress-hosting",
+      "plans": [
+        {
+          "name": {
+            "en": "Starter",
+            "ar": "Starter"
+          },
+          "priceMonthly": 21,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=29271-1-lhr&t=36",
+          "badge": {
+            "en": "Starter",
+            "ar": "بداية"
+          },
+          "features": {
+            "en": [
+              "1 WordPress Website",
+              "50GB SSD Web Space",
+              "Unmetered Bandwidth",
+              "5 × 10GB Mailboxes",
+              "WordPress Tools Included"
+            ],
+            "ar": [
+              "موقع ووردبريس واحد",
+              "50GB مساحة SSD",
+              "نقل بيانات غير محدود",
+              "5 صناديق بريد 10GB",
+              "أدوات ووردبريس مدمجة"
+            ]
+          }
+        },
+        {
+          "name": {
+            "en": "Business",
+            "ar": "Business"
+          },
+          "priceMonthly": 35,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=34097-1-lhr&t=36",
+          "badge": {
+            "en": "Popular",
+            "ar": "الأكثر طلباً"
+          },
+          "features": {
+            "en": [
+              "1 WordPress Website",
+              "100GB SSD Web Space",
+              "20 × 10GB Mailboxes",
+              "WordPress Staging Tools",
+              "Daily Backup Access"
+            ],
+            "ar": [
+              "موقع ووردبريس واحد",
+              "100GB مساحة SSD",
+              "20 صندوق بريد 10GB",
+              "أدوات staging لووردبريس",
+              "نسخ احتياطي يومي"
+            ]
+          }
+        },
+        {
+          "name": {
+            "en": "Pro",
+            "ar": "Pro"
+          },
+          "priceMonthly": 50,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=36365-1-lhr&t=36",
+          "badge": {
+            "en": "Growth",
+            "ar": "للنمو"
+          },
+          "features": {
+            "en": [
+              "Professional WordPress Hosting",
+              "Unlimited SSD Web Space",
+              "50 × 10GB Mailboxes",
+              "SSH Access",
+              "Timeline Backups"
+            ],
+            "ar": [
+              "استضافة ووردبريس احترافية",
+              "مساحة SSD غير محدودة",
+              "50 صندوق بريد 10GB",
+              "دخول SSH",
+              "نسخ احتياطي زمني"
+            ]
+          }
+        },
+        {
+          "name": {
+            "en": "Ultimate",
+            "ar": "Ultimate"
+          },
+          "priceMonthly": 70,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=34101-1-lhr&t=36",
+          "badge": {
+            "en": "Advanced",
+            "ar": "متقدمة"
+          },
+          "features": {
+            "en": [
+              "Premium WordPress Hosting",
+              "Unlimited SSD Web Space",
+              "Unlimited 10GB Mailboxes",
+              "Advanced WordPress Management Tools",
+              "Timeline Backups Included"
+            ],
+            "ar": [
+              "استضافة ووردبريس مميزة",
+              "مساحة SSD غير محدودة",
+              "صناديق بريد 10GB غير محدودة",
+              "أدوات إدارة ووردبريس متقدمة",
+              "نسخ احتياطي زمني مدمج"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "windows-hosting",
+      "label": {
+        "en": "Windows",
+        "ar": "ويندوز"
+      },
+      "title": {
+        "en": "Windows Hosting Plans",
+        "ar": "خطط استضافة ويندوز"
+      },
+      "description": {
+        "en": "Windows-based hosting for websites and applications that need Microsoft hosting support.",
+        "ar": "استضافة بنظام ويندوز للمواقع والتطبيقات التي تحتاج إلى دعم استضافة Microsoft."
+      },
+      "categoryUrl": "https://cp.skilledhost.com/pccategory?cat=5197",
+      "pageUrl": "/windows-hosting",
+      "plans": [
+        {
+          "name": {
+            "en": "Starter",
+            "ar": "Starter"
+          },
+          "priceMonthly": 21,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=293503-1-lhr&t=36",
+          "badge": {
+            "en": "Starter",
+            "ar": "بداية"
+          },
+          "features": {
+            "en": [
+              "1 Windows Website",
+              "50GB SSD Web Space",
+              "5 × 10GB Mailboxes",
+              "1 MySQL Database",
+              "Backup and Restore Tools"
+            ],
+            "ar": [
+              "موقع ويندوز واحد",
+              "50GB مساحة SSD",
+              "5 صناديق بريد 10GB",
+              "قاعدة بيانات MySQL واحدة",
+              "أدوات النسخ والاستعادة"
+            ]
+          }
+        },
+        {
+          "name": {
+            "en": "Business",
+            "ar": "Business"
+          },
+          "priceMonthly": 35,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=29269-1&t=36",
+          "badge": {
+            "en": "Popular",
+            "ar": "الأكثر طلباً"
+          },
+          "features": {
+            "en": [
+              "1 Windows Hosting Package",
+              "50GB SSD Web Space",
+              "100 × 10GB Mailboxes",
+              "10 MySQL Databases",
+              "Website Builder Included"
+            ],
+            "ar": [
+              "باقة استضافة ويندوز واحدة",
+              "50GB مساحة SSD",
+              "100 صندوق بريد 10GB",
+              "10 قواعد بيانات MySQL",
+              "منشئ مواقع مدمج"
+            ]
+          }
+        },
+        {
+          "name": {
+            "en": "Pro",
+            "ar": "Pro"
+          },
+          "priceMonthly": 50,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=36513-1&t=36",
+          "badge": {
+            "en": "Growth",
+            "ar": "للنمو"
+          },
+          "features": {
+            "en": [
+              "Professional Windows Hosting",
+              "Up to 6 Domains",
+              "30 × 10GB Mailboxes",
+              "5 MySQL Databases",
+              "File Manager and FTP Access"
+            ],
+            "ar": [
+              "استضافة ويندوز احترافية",
+              "حتى 6 نطاقات",
+              "30 صندوق بريد 10GB",
+              "5 قواعد بيانات MySQL",
+              "مدير ملفات ودخول FTP"
+            ]
+          }
+        },
+        {
+          "name": {
+            "en": "Ultimate",
+            "ar": "Ultimate"
+          },
+          "priceMonthly": 70,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=43909-1&t=36",
+          "badge": {
+            "en": "Advanced",
+            "ar": "متقدمة"
+          },
+          "features": {
+            "en": [
+              "Ultimate Windows Hosting",
+              "Unlimited Domains",
+              "Unlimited SSD Web Space",
+              "Unlimited 10GB Mailboxes",
+              "Unlimited MySQL Databases"
+            ],
+            "ar": [
+              "استضافة ويندوز متقدمة",
+              "نطاقات غير محدودة",
+              "مساحة SSD غير محدودة",
+              "صناديق بريد 10GB غير محدودة",
+              "قواعد بيانات MySQL غير محدودة"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "business-email",
+      "label": {
+        "en": "Business Email",
+        "ar": "بريد الأعمال"
+      },
+      "title": {
+        "en": "Business Email Plans",
+        "ar": "خطط بريد الأعمال"
+      },
+      "description": {
+        "en": "Professional business email using your own domain name, with mailbox hosting and migration options.",
+        "ar": "بريد أعمال احترافي باستخدام اسم نطاقك الخاص مع خيارات استضافة ونقل البريد."
+      },
+      "categoryUrl": "https://cp.skilledhost.com/pccategory?cat=4737",
+      "pageUrl": "/business-email",
+      "plans": [
+        {
+          "name": {
+            "en": "Starter",
+            "ar": "Starter"
+          },
+          "priceMonthly": 14,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=274705-1-lhr&t=36",
+          "badge": {
+            "en": "Starter",
+            "ar": "بداية"
+          },
+          "features": {
+            "en": [
+              "5 Business Mailboxes",
+              "10GB Storage per Mailbox",
+              "Professional Email Using Your Domain",
+              "Webmail Access",
+              "Spam and Virus Protection"
+            ],
+            "ar": [
+              "5 صناديق بريد أعمال",
+              "10GB لكل صندوق بريد",
+              "بريد احترافي باسم نطاقك",
+              "دخول Webmail",
+              "حماية من الرسائل المزعجة والفيروسات"
+            ]
+          }
+        },
+        {
+          "name": {
+            "en": "Plus",
+            "ar": "Plus"
+          },
+          "priceMonthly": 21,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=293505-1-lhr&t=36",
+          "badge": {
+            "en": "Popular",
+            "ar": "الأكثر طلباً"
+          },
+          "features": {
+            "en": [
+              "20 Business Mailboxes",
+              "10GB Storage per Mailbox",
+              "Professional Email Using Your Domain",
+              "Desktop, Mobile and Tablet Access",
+              "Email Forwarding and Autoresponders"
+            ],
+            "ar": [
+              "20 صندوق بريد أعمال",
+              "10GB لكل صندوق بريد",
+              "بريد احترافي باسم نطاقك",
+              "دخول من الكمبيوتر والجوال والتابلت",
+              "تحويل البريد والرد التلقائي"
+            ]
+          }
+        },
+        {
+          "name": {
+            "en": "Pro",
+            "ar": "Pro"
+          },
+          "priceMonthly": 35,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=293507-1-lhr&t=36",
+          "badge": {
+            "en": "Business",
+            "ar": "للأعمال"
+          },
+          "features": {
+            "en": [
+              "50 Business Mailboxes",
+              "10GB Storage per Mailbox",
+              "Professional Email Using Your Domain",
+              "Email Migration Tools",
+              "Suitable for Departments and Staff Accounts"
+            ],
+            "ar": [
+              "50 صندوق بريد أعمال",
+              "10GB لكل صندوق بريد",
+              "بريد احترافي باسم نطاقك",
+              "أدوات نقل البريد",
+              "مناسب للأقسام وحسابات الموظفين"
+            ]
+          }
+        },
+        {
+          "name": {
+            "en": "Ultimate",
+            "ar": "Ultimate"
+          },
+          "priceMonthly": 56,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=293509-1-lhr&t=36",
+          "badge": {
+            "en": "Advanced",
+            "ar": "متقدمة"
+          },
+          "features": {
+            "en": [
+              "Unlimited Business Mailboxes",
+              "10GB Storage per Mailbox",
+              "Professional Email Using Your Domain",
+              "Email Forwarding and Autoresponders",
+              "Ideal for Larger Teams"
+            ],
+            "ar": [
+              "صناديق بريد أعمال غير محدودة",
+              "10GB لكل صندوق بريد",
+              "بريد احترافي باسم نطاقك",
+              "تحويل البريد والرد التلقائي",
+              "مناسب للفرق الكبيرة"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

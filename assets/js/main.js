@@ -1,6 +1,7 @@
 /* =========================================================
    SKILLED HOST MAIN WEBSITE
    LANGUAGE + THEME + MOBILE MENU + HEADER DROPDOWNS
+   DOMAIN SEARCH + DYNAMIC PRICING
    ========================================================= */
 
 const root = document.documentElement;
@@ -11,13 +12,64 @@ const langToggle = document.querySelector("[data-lang-toggle]");
 const langCode = document.querySelector(".lang-code");
 const navItems = document.querySelectorAll(".nav-item.has-mega");
 const domainForms = document.querySelectorAll(".domain-search");
+const pricingRoot = document.querySelector("[data-pricing-root]");
 
 const savedTheme = localStorage.getItem("skilledHostTheme") || "light";
 const savedLang = localStorage.getItem("skilledHostLang") || "en";
 
+let pricingData = null;
+let activePricingCategoryIndex = 0;
+
+/* =========================================================
+   BASIC HELPERS
+   ========================================================= */
+
+function getCurrentLang() {
+  return root.getAttribute("lang") || "en";
+}
+
+function getCurrentTheme() {
+  return root.getAttribute("data-theme") || "light";
+}
+
+function getLocalized(value, lang = getCurrentLang()) {
+  if (!value) {
+    return "";
+  }
+
+  if (typeof value === "string" || typeof value === "number") {
+    return String(value);
+  }
+
+  return value[lang] || value.en || "";
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function formatPrice(value) {
+  const number = Number(value);
+
+  if (Number.isNaN(number)) {
+    return "0.00";
+  }
+
+  return number.toFixed(2);
+}
+
+/* =========================================================
+   CONTROL LABELS
+   ========================================================= */
+
 function updateControlLabels() {
-  const currentTheme = root.getAttribute("data-theme") || "light";
-  const currentLang = root.getAttribute("lang") || "en";
+  const currentTheme = getCurrentTheme();
+  const currentLang = getCurrentLang();
 
   if (themeToggle) {
     const themeLabel =
@@ -44,6 +96,10 @@ function updateControlLabels() {
     langCode.textContent = currentLang === "ar" ? "EN" : "AR";
   }
 }
+
+/* =========================================================
+   THEME + LANGUAGE
+   ========================================================= */
 
 function applyTheme(theme) {
   root.setAttribute("data-theme", theme);
@@ -74,7 +130,15 @@ function applyLanguage(lang) {
 
   updateControlLabels();
   closeAllMegaMenus();
+
+  if (pricingData && pricingRoot) {
+    renderPricingCategory(activePricingCategoryIndex);
+  }
 }
+
+/* =========================================================
+   HEADER + MEGA MENU
+   ========================================================= */
 
 function closeAllMegaMenus() {
   navItems.forEach((item) => {
@@ -103,7 +167,7 @@ if (siteHeader && mobileMenuButton) {
 
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
-    const currentTheme = root.getAttribute("data-theme") || "light";
+    const currentTheme = getCurrentTheme();
     const nextTheme = currentTheme === "dark" ? "light" : "dark";
 
     applyTheme(nextTheme);
@@ -112,7 +176,7 @@ if (themeToggle) {
 
 if (langToggle) {
   langToggle.addEventListener("click", () => {
-    const currentLang = root.getAttribute("lang") || "en";
+    const currentLang = getCurrentLang();
     const nextLang = currentLang === "ar" ? "en" : "ar";
 
     applyLanguage(nextLang);
@@ -206,3 +270,178 @@ domainForms.forEach((form) => {
     window.location.href = `https://cp.skilledhost.com/domain-search?domain=${encodeURIComponent(cleanDomain)}`;
   });
 });
+
+/* =========================================================
+   DYNAMIC PRICING
+   Loads assets/data/pricing.json and renders homepage pricing cards
+   ========================================================= */
+
+function buildPricingTabs(categories) {
+  const lang = getCurrentLang();
+
+  return `
+    <div class="pricing-tabs" role="tablist" aria-label="Hosting plan categories">
+      ${categories
+        .map((category, index) => {
+          const label = escapeHtml(getLocalized(category.label, lang));
+          const isActive = index === activePricingCategoryIndex ? " is-active" : "";
+
+          return `
+            <button
+              class="pricing-tab${isActive}"
+              type="button"
+              role="tab"
+              data-pricing-tab="${index}"
+              aria-selected="${index === activePricingCategoryIndex ? "true" : "false"}"
+            >
+              ${label}
+            </button>
+          `;
+        })
+        .join("")}
+    </div>
+  `;
+}
+
+function buildPricingCard(plan, category, globalData) {
+  const lang = getCurrentLang();
+
+  const planName = escapeHtml(getLocalized(plan.name, lang));
+  const badge = escapeHtml(getLocalized(plan.badge, lang));
+  const currency = escapeHtml(globalData.currency || "AED");
+  const price = formatPrice(plan.priceMonthly);
+
+  const features = Array.isArray(plan.features?.[lang])
+    ? plan.features[lang]
+    : Array.isArray(plan.features?.en)
+      ? plan.features.en
+      : [];
+
+  const termLabel = escapeHtml(getLocalized(globalData.defaultTerm?.label, lang));
+  const discount = globalData.defaultTerm?.discountPercent || 15;
+  const orderUrl = escapeHtml(plan.orderUrl || category.categoryUrl || "https://cp.skilledhost.com");
+
+  const isPopular =
+    String(getLocalized(plan.badge, "en")).toLowerCase().includes("popular") ||
+    String(getLocalized(plan.badge, "en")).toLowerCase().includes("recommended");
+
+  const ctaText = lang === "ar" ? "اطلب الآن" : "Order Now";
+  const periodText = lang === "ar" ? "/ شهر" : "/mo";
+  const termText =
+    lang === "ar"
+      ? `${termLabel} مع خصم ${discount}%`
+      : `${termLabel} with ${discount}% discount`;
+
+  return `
+    <article class="pricing-card${isPopular ? " is-popular" : ""}">
+      <span class="pricing-card-badge">${badge}</span>
+
+      <h4>${planName}</h4>
+
+      <div class="pricing-price">
+        <span class="pricing-currency">${currency}</span>
+        <span class="pricing-amount">${price}</span>
+        <span class="pricing-period">${periodText}</span>
+      </div>
+
+      <p class="pricing-term">${escapeHtml(termText)}</p>
+
+      <ul class="pricing-features">
+        ${features
+          .map((feature) => `<li>${escapeHtml(feature)}</li>`)
+          .join("")}
+      </ul>
+
+      <a href="${orderUrl}" class="btn ${isPopular ? "btn-primary" : "btn-secondary"}">
+        ${escapeHtml(ctaText)}
+      </a>
+    </article>
+  `;
+}
+
+function renderPricingCategory(index = 0) {
+  if (!pricingRoot || !pricingData || !Array.isArray(pricingData.categories)) {
+    return;
+  }
+
+  const lang = getCurrentLang();
+  const categories = pricingData.categories;
+  const safeIndex = categories[index] ? index : 0;
+  const category = categories[safeIndex];
+
+  activePricingCategoryIndex = safeIndex;
+
+  const categoryTitle = escapeHtml(getLocalized(category.title, lang));
+  const categoryDescription = escapeHtml(getLocalized(category.description, lang));
+  const categoryUrl = escapeHtml(category.categoryUrl || "https://cp.skilledhost.com");
+  const billingNote = escapeHtml(getLocalized(pricingData.billingNote, lang));
+  const viewAllText = lang === "ar" ? "عرض كل الخطط" : "View all plans";
+  const noteLabel = lang === "ar" ? "ملاحظة السعر:" : "Pricing note:";
+
+  pricingRoot.innerHTML = `
+    ${buildPricingTabs(categories)}
+
+    <div class="pricing-category-intro">
+      <div>
+        <h3>${categoryTitle}</h3>
+        <p>${categoryDescription}</p>
+      </div>
+
+      <a href="${categoryUrl}" class="pricing-category-link">
+        ${escapeHtml(viewAllText)}
+      </a>
+    </div>
+
+    <div class="pricing-grid">
+      ${category.plans
+        .map((plan) => buildPricingCard(plan, category, pricingData))
+        .join("")}
+    </div>
+
+    <div class="pricing-note">
+      <span aria-hidden="true">ⓘ</span>
+      <span><strong>${escapeHtml(noteLabel)}</strong> ${billingNote}</span>
+    </div>
+  `;
+
+  pricingRoot.querySelectorAll("[data-pricing-tab]").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const nextIndex = Number(tab.getAttribute("data-pricing-tab"));
+
+      renderPricingCategory(nextIndex);
+    });
+  });
+}
+
+async function loadPricingData() {
+  if (!pricingRoot) {
+    return;
+  }
+
+  try {
+    const response = await fetch("assets/data/pricing.json", {
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      throw new Error("Pricing data could not be loaded.");
+    }
+
+    pricingData = await response.json();
+    renderPricingCategory(0);
+  } catch (error) {
+    const lang = getCurrentLang();
+    const message =
+      lang === "ar"
+        ? "تعذر تحميل الخطط حالياً. يرجى زيارة منطقة العميل لعرض الأسعار."
+        : "Pricing plans could not be loaded right now. Please visit the client area to view plans.";
+
+    pricingRoot.innerHTML = `
+      <div class="pricing-loading">
+        ${escapeHtml(message)}
+      </div>
+    `;
+  }
+}
+
+loadPricingData();
