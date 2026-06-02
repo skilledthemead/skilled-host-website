@@ -27,11 +27,277 @@
       }
     }
   ],
-"billingNote": {
-  "en": "Monthly-equivalent prices are based on the 3-year term. 1-year and 2-year billing terms are also available in HostShop checkout.",
-  "ar": "الأسعار المعروضة هي السعر الشهري التقريبي عند اختيار اشتراك 3 سنوات. تتوفر أيضاً خيارات الدفع السنوي وسنتين داخل صفحة إتمام الطلب في HostShop."
-},
+  "billingNote": {
+    "en": "Monthly-equivalent prices are based on the 3-year term. 1-year and 2-year billing terms are also available in HostShop checkout. Free first-year domain applies only to eligible packages/plans and selected extensions. Domain renews at the standard yearly price after the first year.",
+    "ar": "الأسعار المعروضة هي السعر الشهري التقريبي عند اختيار اشتراك 3 سنوات. تتوفر أيضاً خيارات الدفع السنوي وسنتين داخل صفحة إتمام الطلب في HostShop. النطاق المجاني للسنة الأولى ينطبق فقط على الباقات والخطط المؤهلة وامتدادات نطاق محددة، ويتم تجديد النطاق بالسعر السنوي القياسي بعد السنة الأولى."
+  },
   "categories": [
+    {
+      "id": "website-packages",
+      "label": {
+        "en": "Website Packages",
+        "ar": "باقات المواقع"
+      },
+      "title": {
+        "en": "Website Packages",
+        "ar": "باقات المواقع"
+      },
+      "description": {
+        "en": "Managed website packages for businesses that need a professional online presence without managing hosting files, servers or technical settings.",
+        "ar": "باقات مواقع مُدارة للشركات التي تحتاج إلى حضور احترافي على الإنترنت دون إدارة ملفات الاستضافة أو الخوادم أو الإعدادات التقنية."
+      },
+      "categoryUrl": "https://cp.skilledhost.com/pccategory?cat=5255",
+      "pageUrl": "/website-packages",
+      "plans": [
+        {
+          "name": {
+            "en": "Website Business",
+            "ar": "Website Business"
+          },
+          "priceMonthly": 50,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=294887-1-lhr&t=36",
+          "badge": {
+            "en": "Business",
+            "ar": "للأعمال"
+          },
+          "features": {
+            "en": [
+              "Business Website Included",
+              "Free First-Year Domain",
+              "Unlimited SSD Web Space",
+              "20 × 10GB Business Mailboxes",
+              "Free SSL Setup",
+              "Website Backup Included",
+              "Domain Connection Support",
+              "Malware Scanning",
+              "DDoS Protection",
+              "No File or Server Access Required"
+            ],
+            "ar": [
+              "موقع أعمال مدمج",
+              "نطاق مجاني للسنة الأولى",
+              "مساحة SSD غير محدودة",
+              "20 صندوق بريد أعمال 10GB",
+              "إعداد SSL مجاني",
+              "نسخ احتياطي للموقع مدمج",
+              "دعم ربط النطاق",
+              "فحص البرمجيات الضارة",
+              "حماية DDoS",
+              "لا حاجة للوصول إلى الملفات أو الخادم"
+            ]
+          }
+        },
+        {
+          "name": {
+            "en": "Website Pro",
+            "ar": "Website Pro"
+          },
+          "priceMonthly": 64,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=294889-1-lhr&t=36",
+          "badge": {
+            "en": "Popular",
+            "ar": "الأكثر طلباً"
+          },
+          "features": {
+            "en": [
+              "Business Website Included",
+              "Free First-Year Domain",
+              "Unlimited SSD Web Space",
+              "50 × 10GB Business Mailboxes",
+              "Free SSL Setup",
+              "Website Backup Included",
+              "Domain Connection Support",
+              "Malware Scanning",
+              "DDoS Protection",
+              "No File or Server Access Required"
+            ],
+            "ar": [
+              "موقع أعمال مدمج",
+              "نطاق مجاني للسنة الأولى",
+              "مساحة SSD غير محدودة",
+              "50 صندوق بريد أعمال 10GB",
+              "إعداد SSL مجاني",
+              "نسخ احتياطي للموقع مدمج",
+              "دعم ربط النطاق",
+              "فحص البرمجيات الضارة",
+              "حماية DDoS",
+              "لا حاجة للوصول إلى الملفات أو الخادم"
+            ]
+          }
+        },
+        {
+          "name": {
+            "en": "Website Ultimate",
+            "ar": "Website Ultimate"
+          },
+          "priceMonthly": 85,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=119534-1-lhr&t=36",
+          "badge": {
+            "en": "Advanced",
+            "ar": "متقدمة"
+          },
+          "features": {
+            "en": [
+              "Business Website Included",
+              "Free First-Year Domain",
+              "Unlimited SSD Web Space",
+              "Unlimited × 10GB Business Mailboxes",
+              "Free SSL Setup",
+              "Website Backup Included",
+              "Domain Connection Support",
+              "Malware Scanning",
+              "DDoS Protection",
+              "No File or Server Access Required"
+            ],
+            "ar": [
+              "موقع أعمال مدمج",
+              "نطاق مجاني للسنة الأولى",
+              "مساحة SSD غير محدودة",
+              "صناديق بريد أعمال 10GB غير محدودة",
+              "إعداد SSL مجاني",
+              "نسخ احتياطي للموقع مدمج",
+              "دعم ربط النطاق",
+              "فحص البرمجيات الضارة",
+              "حماية DDoS",
+              "لا حاجة للوصول إلى الملفات أو الخادم"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "online-store-packages",
+      "label": {
+        "en": "Online Store",
+        "ar": "المتجر الإلكتروني"
+      },
+      "title": {
+        "en": "Online Store Packages",
+        "ar": "باقات المتاجر الإلكترونية"
+      },
+      "description": {
+        "en": "Managed online store packages with product pages, categories, checkout setup, business email, SSL, backup and domain connection support.",
+        "ar": "باقات متاجر إلكترونية مُدارة تشمل صفحات المنتجات، التصنيفات، إعداد الطلب، بريد الأعمال، SSL، النسخ الاحتياطي ودعم ربط النطاق."
+      },
+      "categoryUrl": "https://cp.skilledhost.com/pccategory?cat=5257",
+      "pageUrl": "/online-store-packages",
+      "plans": [
+        {
+          "name": {
+            "en": "Online Store Business",
+            "ar": "Online Store Business"
+          },
+          "priceMonthly": 50,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=294897-1-lhr&t=36",
+          "badge": {
+            "en": "Business",
+            "ar": "للأعمال"
+          },
+          "features": {
+            "en": [
+              "Online Store Included",
+              "Free First-Year Domain",
+              "Unlimited SSD Web Space",
+              "20 × 10GB Business Mailboxes",
+              "Product Pages Included",
+              "Category Pages Included",
+              "Checkout Setup Included",
+              "Free SSL Setup",
+              "Website Backup Included",
+              "No File or Server Access Required"
+            ],
+            "ar": [
+              "متجر إلكتروني مدمج",
+              "نطاق مجاني للسنة الأولى",
+              "مساحة SSD غير محدودة",
+              "20 صندوق بريد أعمال 10GB",
+              "صفحات منتجات مدمجة",
+              "صفحات تصنيفات مدمجة",
+              "إعداد الطلب مدمج",
+              "إعداد SSL مجاني",
+              "نسخ احتياطي للموقع مدمج",
+              "لا حاجة للوصول إلى الملفات أو الخادم"
+            ]
+          }
+        },
+        {
+          "name": {
+            "en": "Online Store Pro",
+            "ar": "Online Store Pro"
+          },
+          "priceMonthly": 64,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=294899-1-lhr&t=36",
+          "badge": {
+            "en": "Popular",
+            "ar": "الأكثر طلباً"
+          },
+          "features": {
+            "en": [
+              "Online Store Included",
+              "Free First-Year Domain",
+              "Unlimited SSD Web Space",
+              "50 × 10GB Business Mailboxes",
+              "Product Pages Included",
+              "Category Pages Included",
+              "Checkout Setup Included",
+              "Free SSL Setup",
+              "Website Backup Included",
+              "No File or Server Access Required"
+            ],
+            "ar": [
+              "متجر إلكتروني مدمج",
+              "نطاق مجاني للسنة الأولى",
+              "مساحة SSD غير محدودة",
+              "50 صندوق بريد أعمال 10GB",
+              "صفحات منتجات مدمجة",
+              "صفحات تصنيفات مدمجة",
+              "إعداد الطلب مدمج",
+              "إعداد SSL مجاني",
+              "نسخ احتياطي للموقع مدمج",
+              "لا حاجة للوصول إلى الملفات أو الخادم"
+            ]
+          }
+        },
+        {
+          "name": {
+            "en": "Online Store Ultimate",
+            "ar": "Online Store Ultimate"
+          },
+          "priceMonthly": 85,
+          "orderUrl": "https://cp.skilledhost.com/domain-required?p=294901-1-lhr&t=36",
+          "badge": {
+            "en": "Advanced",
+            "ar": "متقدمة"
+          },
+          "features": {
+            "en": [
+              "Online Store Included",
+              "Free First-Year Domain",
+              "Unlimited SSD Web Space",
+              "Unlimited × 10GB Business Mailboxes",
+              "Product Pages Included",
+              "Category Pages Included",
+              "Checkout Setup Included",
+              "Free SSL Setup",
+              "Website Backup Included",
+              "No File or Server Access Required"
+            ],
+            "ar": [
+              "متجر إلكتروني مدمج",
+              "نطاق مجاني للسنة الأولى",
+              "مساحة SSD غير محدودة",
+              "صناديق بريد أعمال 10GB غير محدودة",
+              "صفحات منتجات مدمجة",
+              "صفحات تصنيفات مدمجة",
+              "إعداد الطلب مدمج",
+              "إعداد SSL مجاني",
+              "نسخ احتياطي للموقع مدمج",
+              "لا حاجة للوصول إلى الملفات أو الخادم"
+            ]
+          }
+        }
+      ]
+    },
     {
       "id": "web-hosting",
       "label": {
@@ -43,8 +309,8 @@
         "ar": "خطط استضافة المواقع"
       },
       "description": {
-        "en": "Reliable hosting for business websites, landing pages, portfolios and company profiles.",
-        "ar": "استضافة موثوقة لمواقع الشركات والصفحات التعريفية والمعارض الرقمية."
+        "en": "Reliable hosting for business websites, landing pages, portfolios, blogs and company profiles.",
+        "ar": "استضافة موثوقة لمواقع الشركات والصفحات التعريفية والمعارض الرقمية والمدونات."
       },
       "categoryUrl": "https://cp.skilledhost.com/pccategory?cat=5191",
       "pageUrl": "/web-hosting",
@@ -66,14 +332,22 @@
               "100GB SSD Web Space",
               "Unmetered Bandwidth",
               "5 × 10GB Mailboxes",
-              "Free Wildcard SSL Certificates"
+              "Free Wildcard SSL Certificates",
+              "1 MySQL Database",
+              "Malware Scanning",
+              "DDoS Protection",
+              "Website Builder Included"
             ],
             "ar": [
               "موقع واحد",
               "100GB مساحة SSD",
               "نقل بيانات غير محدود",
               "5 صناديق بريد 10GB",
-              "شهادات SSL مجانية"
+              "شهادات SSL مجانية",
+              "قاعدة بيانات MySQL واحدة",
+              "فحص البرمجيات الضارة",
+              "حماية DDoS",
+              "منشئ مواقع مدمج"
             ]
           }
         },
@@ -91,16 +365,26 @@
           "features": {
             "en": [
               "Up to 5 Websites",
+              "Free First-Year Domain",
               "1000GB SSD Web Space",
               "Unmetered Bandwidth",
               "20 × 10GB Mailboxes",
+              "Free Wildcard SSL Certificates",
+              "5 MySQL Databases",
+              "Malware Scanning",
+              "DDoS Protection",
               "Daily Backup Access"
             ],
             "ar": [
               "حتى 5 مواقع",
+              "نطاق مجاني للسنة الأولى",
               "1000GB مساحة SSD",
               "نقل بيانات غير محدود",
               "20 صندوق بريد 10GB",
+              "شهادات SSL مجانية",
+              "5 قواعد بيانات MySQL",
+              "فحص البرمجيات الضارة",
+              "حماية DDoS",
               "نسخ احتياطي يومي"
             ]
           }
@@ -119,16 +403,26 @@
           "features": {
             "en": [
               "Up to 10 Websites",
+              "Free First-Year Domain",
               "Unlimited SSD Web Space",
+              "Unmetered Bandwidth",
               "50 × 10GB Mailboxes",
+              "Free Wildcard SSL Certificates",
+              "10 MySQL Databases",
               "SSH Access",
+              "Remote MySQL Access",
               "Timeline Backups"
             ],
             "ar": [
               "حتى 10 مواقع",
+              "نطاق مجاني للسنة الأولى",
               "مساحة SSD غير محدودة",
+              "نقل بيانات غير محدود",
               "50 صندوق بريد 10GB",
+              "شهادات SSL مجانية",
+              "10 قواعد بيانات MySQL",
               "دخول SSH",
+              "دخول Remote MySQL",
               "نسخ احتياطي زمني"
             ]
           }
@@ -147,17 +441,27 @@
           "features": {
             "en": [
               "Unlimited Websites",
+              "Free First-Year Domain",
               "Unlimited SSD Web Space",
-              "Unlimited 10GB Mailboxes",
+              "Unlimited Bandwidth",
+              "Unlimited × 10GB Mailboxes",
+              "Free Wildcard SSL Certificates",
               "Unlimited MySQL Databases",
-              "Advanced Hosting Flexibility"
+              "SSH Access",
+              "Remote MySQL Access",
+              "Timeline Backups"
             ],
             "ar": [
               "مواقع غير محدودة",
+              "نطاق مجاني للسنة الأولى",
               "مساحة SSD غير محدودة",
+              "نقل بيانات غير محدود",
               "صناديق بريد 10GB غير محدودة",
+              "شهادات SSL مجانية",
               "قواعد بيانات MySQL غير محدودة",
-              "مرونة متقدمة للاستضافة"
+              "دخول SSH",
+              "دخول Remote MySQL",
+              "نسخ احتياطي زمني"
             ]
           }
         }
@@ -174,8 +478,8 @@
         "ar": "خطط استضافة ووردبريس"
       },
       "description": {
-        "en": "Optimised hosting for WordPress websites, blogs, company pages and content platforms.",
-        "ar": "استضافة محسّنة لمواقع ووردبريس والمدونات ومواقع الشركات ومنصات المحتوى."
+        "en": "Managed WordPress hosting for fast, secure and professional websites, blogs and online projects.",
+        "ar": "استضافة ووردبريس مُدارة لمواقع ومدونات ومشاريع إلكترونية سريعة وآمنة واحترافية."
       },
       "categoryUrl": "https://cp.skilledhost.com/pccategory?cat=5193",
       "pageUrl": "/wordpress-hosting",
@@ -197,6 +501,10 @@
               "50GB SSD Web Space",
               "Unmetered Bandwidth",
               "5 × 10GB Mailboxes",
+              "Free Wildcard SSL Certificates",
+              "1 MySQL Database",
+              "Malware Scanning",
+              "DDoS Protection",
               "WordPress Tools Included"
             ],
             "ar": [
@@ -204,6 +512,10 @@
               "50GB مساحة SSD",
               "نقل بيانات غير محدود",
               "5 صناديق بريد 10GB",
+              "شهادات SSL مجانية",
+              "قاعدة بيانات MySQL واحدة",
+              "فحص البرمجيات الضارة",
+              "حماية DDoS",
               "أدوات ووردبريس مدمجة"
             ]
           }
@@ -222,17 +534,27 @@
           "features": {
             "en": [
               "1 WordPress Website",
+              "Free First-Year Domain",
               "100GB SSD Web Space",
+              "Unmetered Bandwidth",
               "20 × 10GB Mailboxes",
+              "Free Wildcard SSL Certificates",
               "WordPress Staging Tools",
-              "Daily Backup Access"
+              "Daily Backup Access",
+              "Malware Scanning",
+              "Easy WordPress Management"
             ],
             "ar": [
               "موقع ووردبريس واحد",
+              "نطاق مجاني للسنة الأولى",
               "100GB مساحة SSD",
+              "نقل بيانات غير محدود",
               "20 صندوق بريد 10GB",
+              "شهادات SSL مجانية",
               "أدوات staging لووردبريس",
-              "نسخ احتياطي يومي"
+              "نسخ احتياطي يومي",
+              "فحص البرمجيات الضارة",
+              "إدارة ووردبريس سهلة"
             ]
           }
         },
@@ -250,17 +572,27 @@
           "features": {
             "en": [
               "Professional WordPress Hosting",
+              "Free First-Year Domain",
               "Unlimited SSD Web Space",
+              "Unmetered Bandwidth",
               "50 × 10GB Mailboxes",
+              "Free Wildcard SSL Certificates",
+              "WordPress Staging Tools",
               "SSH Access",
-              "Timeline Backups"
+              "Remote MySQL Access",
+              "Timeline Backups Included"
             ],
             "ar": [
               "استضافة ووردبريس احترافية",
+              "نطاق مجاني للسنة الأولى",
               "مساحة SSD غير محدودة",
+              "نقل بيانات غير محدود",
               "50 صندوق بريد 10GB",
+              "شهادات SSL مجانية",
+              "أدوات staging لووردبريس",
               "دخول SSH",
-              "نسخ احتياطي زمني"
+              "دخول Remote MySQL",
+              "نسخ احتياطي زمني مدمج"
             ]
           }
         },
@@ -278,15 +610,25 @@
           "features": {
             "en": [
               "Premium WordPress Hosting",
+              "Free First-Year Domain",
               "Unlimited SSD Web Space",
-              "Unlimited 10GB Mailboxes",
+              "Unlimited Bandwidth",
+              "Unlimited × 10GB Mailboxes",
+              "Free Wildcard SSL Certificates",
+              "WordPress Staging Tools",
+              "SSH Access",
               "Advanced WordPress Management Tools",
               "Timeline Backups Included"
             ],
             "ar": [
               "استضافة ووردبريس مميزة",
+              "نطاق مجاني للسنة الأولى",
               "مساحة SSD غير محدودة",
+              "نقل بيانات غير محدود",
               "صناديق بريد 10GB غير محدودة",
+              "شهادات SSL مجانية",
+              "أدوات staging لووردبريس",
+              "دخول SSH",
               "أدوات إدارة ووردبريس متقدمة",
               "نسخ احتياطي زمني مدمج"
             ]
@@ -326,16 +668,26 @@
             "en": [
               "1 Windows Website",
               "50GB SSD Web Space",
+              "Unmetered Bandwidth",
               "5 × 10GB Mailboxes",
+              "Free Wildcard SSL Certificates",
               "1 MySQL Database",
-              "Backup and Restore Tools"
+              "5 Subdomains",
+              "File Manager and FTP Access",
+              "Backup and Restore Tools",
+              "DDoS Protection"
             ],
             "ar": [
               "موقع ويندوز واحد",
               "50GB مساحة SSD",
+              "نقل بيانات غير محدود",
               "5 صناديق بريد 10GB",
+              "شهادات SSL مجانية",
               "قاعدة بيانات MySQL واحدة",
-              "أدوات النسخ والاستعادة"
+              "5 نطاقات فرعية",
+              "مدير ملفات ودخول FTP",
+              "أدوات النسخ والاستعادة",
+              "حماية DDoS"
             ]
           }
         },
@@ -353,17 +705,27 @@
           "features": {
             "en": [
               "1 Windows Hosting Package",
+              "Free First-Year Domain",
               "50GB SSD Web Space",
-              "100 × 10GB Mailboxes",
+              "Unmetered Bandwidth",
+              "20 × 10GB Mailboxes",
+              "Free Wildcard SSL Certificates",
               "10 MySQL Databases",
-              "Website Builder Included"
+              "10 Subdomains",
+              "Website Builder Included",
+              "Backup and Restore Tools"
             ],
             "ar": [
               "باقة استضافة ويندوز واحدة",
+              "نطاق مجاني للسنة الأولى",
               "50GB مساحة SSD",
-              "100 صندوق بريد 10GB",
+              "نقل بيانات غير محدود",
+              "20 صندوق بريد 10GB",
+              "شهادات SSL مجانية",
               "10 قواعد بيانات MySQL",
-              "منشئ مواقع مدمج"
+              "10 نطاقات فرعية",
+              "منشئ مواقع مدمج",
+              "أدوات النسخ والاستعادة"
             ]
           }
         },
@@ -381,16 +743,26 @@
           "features": {
             "en": [
               "Professional Windows Hosting",
+              "Free First-Year Domain",
               "Up to 6 Domains",
+              "50GB SSD Web Space",
+              "Unmetered Bandwidth",
               "30 × 10GB Mailboxes",
+              "Free Wildcard SSL Certificates",
               "5 MySQL Databases",
+              "10 Subdomains",
               "File Manager and FTP Access"
             ],
             "ar": [
               "استضافة ويندوز احترافية",
+              "نطاق مجاني للسنة الأولى",
               "حتى 6 نطاقات",
+              "50GB مساحة SSD",
+              "نقل بيانات غير محدود",
               "30 صندوق بريد 10GB",
+              "شهادات SSL مجانية",
               "5 قواعد بيانات MySQL",
+              "10 نطاقات فرعية",
               "مدير ملفات ودخول FTP"
             ]
           }
@@ -409,17 +781,27 @@
           "features": {
             "en": [
               "Ultimate Windows Hosting",
+              "Free First-Year Domain",
               "Unlimited Domains",
               "Unlimited SSD Web Space",
-              "Unlimited 10GB Mailboxes",
-              "Unlimited MySQL Databases"
+              "Unmetered Bandwidth",
+              "Unlimited × 10GB Mailboxes",
+              "Free Wildcard SSL Certificates",
+              "Unlimited MySQL Databases",
+              "Website Builder Included",
+              "Backup and Restore Tools"
             ],
             "ar": [
               "استضافة ويندوز متقدمة",
+              "نطاق مجاني للسنة الأولى",
               "نطاقات غير محدودة",
               "مساحة SSD غير محدودة",
+              "نقل بيانات غير محدود",
               "صناديق بريد 10GB غير محدودة",
-              "قواعد بيانات MySQL غير محدودة"
+              "شهادات SSL مجانية",
+              "قواعد بيانات MySQL غير محدودة",
+              "منشئ مواقع مدمج",
+              "أدوات النسخ والاستعادة"
             ]
           }
         }
@@ -436,8 +818,8 @@
         "ar": "خطط بريد الأعمال"
       },
       "description": {
-        "en": "Professional business email using your own domain name, with mailbox hosting and migration options.",
-        "ar": "بريد أعمال احترافي باستخدام اسم نطاقك الخاص مع خيارات استضافة ونقل البريد."
+        "en": "Professional business email using your own domain name, with secure mailbox hosting, webmail access and migration options.",
+        "ar": "بريد أعمال احترافي باستخدام اسم نطاقك الخاص مع استضافة بريد آمنة، دخول Webmail وخيارات نقل البريد."
       },
       "categoryUrl": "https://cp.skilledhost.com/pccategory?cat=4737",
       "pageUrl": "/business-email",
@@ -459,14 +841,20 @@
               "10GB Storage per Mailbox",
               "Professional Email Using Your Domain",
               "Webmail Access",
-              "Spam and Virus Protection"
+              "Desktop, Mobile and Tablet Access",
+              "Spam and Virus Protection",
+              "Outlook and Email App Support",
+              "Email Migration Tools"
             ],
             "ar": [
               "5 صناديق بريد أعمال",
               "10GB لكل صندوق بريد",
               "بريد احترافي باسم نطاقك",
               "دخول Webmail",
-              "حماية من الرسائل المزعجة والفيروسات"
+              "دخول من الكمبيوتر والجوال والتابلت",
+              "حماية من الرسائل المزعجة والفيروسات",
+              "دعم Outlook وتطبيقات البريد",
+              "أدوات نقل البريد"
             ]
           }
         },
@@ -484,17 +872,27 @@
           "features": {
             "en": [
               "20 Business Mailboxes",
+              "Free First-Year Domain",
               "10GB Storage per Mailbox",
               "Professional Email Using Your Domain",
+              "Webmail Access",
               "Desktop, Mobile and Tablet Access",
-              "Email Forwarding and Autoresponders"
+              "Spam and Virus Protection",
+              "Outlook and Email App Support",
+              "Email Forwarding and Autoresponders",
+              "Email Migration Tools"
             ],
             "ar": [
               "20 صندوق بريد أعمال",
+              "نطاق مجاني للسنة الأولى",
               "10GB لكل صندوق بريد",
               "بريد احترافي باسم نطاقك",
+              "دخول Webmail",
               "دخول من الكمبيوتر والجوال والتابلت",
-              "تحويل البريد والرد التلقائي"
+              "حماية من الرسائل المزعجة والفيروسات",
+              "دعم Outlook وتطبيقات البريد",
+              "تحويل البريد والرد التلقائي",
+              "أدوات نقل البريد"
             ]
           }
         },
@@ -512,16 +910,26 @@
           "features": {
             "en": [
               "50 Business Mailboxes",
+              "Free First-Year Domain",
               "10GB Storage per Mailbox",
               "Professional Email Using Your Domain",
-              "Email Migration Tools",
+              "Webmail Access",
+              "Desktop, Mobile and Tablet Access",
+              "Spam and Virus Protection",
+              "Outlook and Email App Support",
+              "Email Forwarding and Autoresponders",
               "Suitable for Departments and Staff Accounts"
             ],
             "ar": [
               "50 صندوق بريد أعمال",
+              "نطاق مجاني للسنة الأولى",
               "10GB لكل صندوق بريد",
               "بريد احترافي باسم نطاقك",
-              "أدوات نقل البريد",
+              "دخول Webmail",
+              "دخول من الكمبيوتر والجوال والتابلت",
+              "حماية من الرسائل المزعجة والفيروسات",
+              "دعم Outlook وتطبيقات البريد",
+              "تحويل البريد والرد التلقائي",
               "مناسب للأقسام وحسابات الموظفين"
             ]
           }
@@ -540,17 +948,27 @@
           "features": {
             "en": [
               "Unlimited Business Mailboxes",
+              "Free First-Year Domain",
               "10GB Storage per Mailbox",
               "Professional Email Using Your Domain",
+              "Webmail Access",
+              "Desktop, Mobile and Tablet Access",
+              "Spam and Virus Protection",
+              "Outlook and Email App Support",
               "Email Forwarding and Autoresponders",
-              "Ideal for Larger Teams"
+              "Ideal for Larger Teams and Multiple Departments"
             ],
             "ar": [
               "صناديق بريد أعمال غير محدودة",
+              "نطاق مجاني للسنة الأولى",
               "10GB لكل صندوق بريد",
               "بريد احترافي باسم نطاقك",
+              "دخول Webmail",
+              "دخول من الكمبيوتر والجوال والتابلت",
+              "حماية من الرسائل المزعجة والفيروسات",
+              "دعم Outlook وتطبيقات البريد",
               "تحويل البريد والرد التلقائي",
-              "مناسب للفرق الكبيرة"
+              "مناسب للفرق الكبيرة والأقسام المتعددة"
             ]
           }
         }
