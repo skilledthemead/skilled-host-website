@@ -309,6 +309,8 @@ function buildPricingCard(plan, category, globalData) {
   const planName = escapeHtml(getLocalized(plan.name, lang));
   const badge = escapeHtml(getLocalized(plan.badge, lang));
   const currency = escapeHtml(globalData.currency || "AED");
+  const numericPrice = Number(plan.priceMonthly);
+  const isFree = !Number.isNaN(numericPrice) && numericPrice === 0;
   const price = formatPrice(plan.priceMonthly);
 
   const features = Array.isArray(plan.features?.[lang])
@@ -321,23 +323,38 @@ function buildPricingCard(plan, category, globalData) {
   const discount = globalData.defaultTerm?.discountPercent || 15;
   const orderUrl = escapeHtml(plan.orderUrl || category.categoryUrl || "https://cp.skilledhost.com");
 
-  const isPopular =
-    String(getLocalized(plan.badge, "en")).toLowerCase().includes("popular") ||
-    String(getLocalized(plan.badge, "en")).toLowerCase().includes("recommended");
+  const badgeEn = String(getLocalized(plan.badge, "en")).toLowerCase();
 
-  const ctaText = lang === "ar" ? "اطلب الآن" : "Order Now";
+  const isPopular =
+    badgeEn.includes("popular") ||
+    badgeEn.includes("recommended");
+
+  const ctaText = getLocalized(plan.cta, lang) || (
+    isFree
+      ? lang === "ar"
+        ? "ابدأ مجاناً"
+        : "Start Free"
+      : lang === "ar"
+        ? "اطلب الآن"
+        : "Order Now"
+  );
+
   const periodText = lang === "ar" ? "/ شهر" : "/mo";
+
   const termText =
     lang === "ar"
       ? `${termLabel} مع خصم ${discount}%`
       : `${termLabel} with ${discount}% discount`;
 
-  return `
-    <article class="pricing-card${isPopular ? " is-popular" : ""}">
-      <span class="pricing-card-badge">${badge}</span>
-
-      <h4>${planName}</h4>
-
+  const priceHtml = isFree
+    ? `
+      <div class="pricing-price pricing-price-free">
+        <span class="pricing-amount pricing-free-text">
+          ${lang === "ar" ? "مجاني" : "Free"}
+        </span>
+      </div>
+    `
+    : `
       <div class="pricing-price">
         <span class="pricing-currency">${currency}</span>
         <span class="pricing-amount">${price}</span>
@@ -345,6 +362,17 @@ function buildPricingCard(plan, category, globalData) {
       </div>
 
       <p class="pricing-term">${escapeHtml(termText)}</p>
+    `;
+
+  const buttonClass = isPopular || isFree ? "btn-primary" : "btn-secondary";
+
+  return `
+    <article class="pricing-card${isPopular ? " is-popular" : ""}${isFree ? " is-free" : ""}">
+      <span class="pricing-card-badge">${badge}</span>
+
+      <h4>${planName}</h4>
+
+      ${priceHtml}
 
       <ul class="pricing-features">
         ${features
@@ -352,7 +380,7 @@ function buildPricingCard(plan, category, globalData) {
           .join("")}
       </ul>
 
-      <a href="${orderUrl}" class="btn ${isPopular ? "btn-primary" : "btn-secondary"}">
+      <a href="${orderUrl}" class="btn ${buttonClass}">
         ${escapeHtml(ctaText)}
       </a>
     </article>

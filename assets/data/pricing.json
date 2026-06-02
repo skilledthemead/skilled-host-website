@@ -11,6 +11,14 @@
   },
   "availableDiscounts": [
     {
+      "months": 12,
+      "discountPercent": 0,
+      "label": {
+        "en": "1 year",
+        "ar": "سنة واحدة"
+      }
+    },
+    {
       "months": 24,
       "discountPercent": 10,
       "label": {
@@ -28,8 +36,8 @@
     }
   ],
   "billingNote": {
-    "en": "Monthly-equivalent prices are based on the 3-year term. 1-year and 2-year billing terms are also available in HostShop checkout. Free first-year domain applies only to eligible packages/plans and selected extensions. Domain renews at the standard yearly price after the first year.",
-    "ar": "الأسعار المعروضة هي السعر الشهري التقريبي عند اختيار اشتراك 3 سنوات. تتوفر أيضاً خيارات الدفع السنوي وسنتين داخل صفحة إتمام الطلب في HostShop. النطاق المجاني للسنة الأولى ينطبق فقط على الباقات والخطط المؤهلة وامتدادات نطاق محددة، ويتم تجديد النطاق بالسعر السنوي القياسي بعد السنة الأولى."
+    "en": "Monthly-equivalent prices are based on the selected long-term billing option. Website and online store free-start plans can begin on a Skilled Host subdomain, then upgrade later to a custom domain, hosting, business email, SSL, security and backup services. Final billing totals, available terms and renewal prices are shown at checkout. Free first-year domain applies only to eligible paid packages and selected extensions.",
+    "ar": "الأسعار المعروضة هي السعر الشهري التقريبي حسب خيار الدفع طويل المدة. يمكن بدء باقات المواقع والمتاجر المجانية على نطاق فرعي من Skilled Host، ثم الترقية لاحقاً إلى نطاق خاص واستضافة وبريد أعمال وSSL وحماية ونسخ احتياطي. تظهر المبالغ النهائية وخيارات الدفع وأسعار التجديد داخل صفحة إتمام الطلب. النطاق المجاني للسنة الأولى ينطبق فقط على الباقات المدفوعة المؤهلة وامتدادات محددة."
   },
   "categories": [
     {
@@ -43,16 +51,58 @@
         "ar": "باقات المواقع"
       },
       "description": {
-        "en": "Managed website packages for businesses that need a professional online presence without managing hosting files, servers or technical settings.",
-        "ar": "باقات مواقع مُدارة للشركات التي تحتاج إلى حضور احترافي على الإنترنت دون إدارة ملفات الاستضافة أو الخوادم أو الإعدادات التقنية."
+        "en": "Start with a free SEO-ready website theme on a Skilled Host subdomain. Customize your sections, use AI-assisted content and upgrade when you are ready for a custom domain, business email, SSL, backups and professional support.",
+        "ar": "ابدأ بقالب موقع مجاني وجاهز لمحركات البحث على نطاق فرعي من Skilled Host. خصص الأقسام، واستخدم مساعدة المحتوى بالذكاء الاصطناعي، ثم قم بالترقية عندما تكون جاهزاً لنطاق خاص وبريد أعمال وSSL ونسخ احتياطي ودعم احترافي."
       },
       "categoryUrl": "https://cp.skilledhost.com/pccategory?cat=5255",
       "pageUrl": "/website-packages",
       "plans": [
         {
           "name": {
+            "en": "Website Free Start",
+            "ar": "بداية مجانية للموقع"
+          },
+          "priceMonthly": 0,
+          "orderUrl": "#theme-categories",
+          "badge": {
+            "en": "Free Start",
+            "ar": "بداية مجانية"
+          },
+          "cta": {
+            "en": "Start Free",
+            "ar": "ابدأ مجاناً"
+          },
+          "features": {
+            "en": [
+              "Free Skilled Host Subdomain",
+              "Professional Website Theme Included",
+              "Website Editor Included",
+              "Flexible Section Variations",
+              "SEO-Ready Page Structure",
+              "AI Content Assistant",
+              "Mobile-Ready Pages",
+              "Contact Section Included",
+              "Upgrade Anytime",
+              "Custom Domain and Business Email Not Included"
+            ],
+            "ar": [
+              "نطاق فرعي مجاني من Skilled Host",
+              "قالب موقع احترافي مدمج",
+              "محرر الموقع مدمج",
+              "تصاميم مرنة للأقسام",
+              "هيكل صفحات جاهز لمحركات البحث",
+              "مساعد محتوى بالذكاء الاصطناعي",
+              "صفحات متجاوبة مع الجوال",
+              "قسم تواصل مدمج",
+              "إمكانية الترقية في أي وقت",
+              "النطاق الخاص وبريد الأعمال غير مدمجين"
+            ]
+          }
+        },
+        {
+          "name": {
             "en": "Website Business",
-            "ar": "Website Business"
+            "ar": "باقة موقع Business"
           },
           "priceMonthly": 50,
           "orderUrl": "https://cp.skilledhost.com/domain-required?p=294887-1-lhr&t=36",
@@ -60,9 +110,14 @@
             "en": "Business",
             "ar": "للأعمال"
           },
+          "cta": {
+            "en": "Upgrade to Business",
+            "ar": "الترقية إلى Business"
+          },
           "features": {
             "en": [
-              "Business Website Included",
+              "Everything in Website Free Start",
+              "Custom Domain Connection",
               "Free First-Year Domain",
               "Unlimited SSD Web Space",
               "20 × 10GB Business Mailboxes",
@@ -70,11 +125,11 @@
               "Website Backup Included",
               "Domain Connection Support",
               "Malware Scanning",
-              "DDoS Protection",
               "No File or Server Access Required"
             ],
             "ar": [
-              "موقع أعمال مدمج",
+              "كل ما في البداية المجانية للموقع",
+              "ربط نطاق خاص",
               "نطاق مجاني للسنة الأولى",
               "مساحة SSD غير محدودة",
               "20 صندوق بريد أعمال 10GB",
@@ -82,7 +137,6 @@
               "نسخ احتياطي للموقع مدمج",
               "دعم ربط النطاق",
               "فحص البرمجيات الضارة",
-              "حماية DDoS",
               "لا حاجة للوصول إلى الملفات أو الخادم"
             ]
           }
@@ -90,7 +144,7 @@
         {
           "name": {
             "en": "Website Pro",
-            "ar": "Website Pro"
+            "ar": "باقة موقع Pro"
           },
           "priceMonthly": 64,
           "orderUrl": "https://cp.skilledhost.com/domain-required?p=294889-1-lhr&t=36",
@@ -98,29 +152,33 @@
             "en": "Popular",
             "ar": "الأكثر طلباً"
           },
+          "cta": {
+            "en": "Choose Pro",
+            "ar": "اختر Pro"
+          },
           "features": {
             "en": [
-              "Business Website Included",
-              "Free First-Year Domain",
+              "Everything in Website Business",
+              "More Section Layout Options",
+              "Advanced SEO Page Structure",
+              "AI-Assisted Content Support",
               "Unlimited SSD Web Space",
               "50 × 10GB Business Mailboxes",
               "Free SSL Setup",
               "Website Backup Included",
               "Domain Connection Support",
-              "Malware Scanning",
-              "DDoS Protection",
               "No File or Server Access Required"
             ],
             "ar": [
-              "موقع أعمال مدمج",
-              "نطاق مجاني للسنة الأولى",
+              "كل ما في باقة موقع Business",
+              "خيارات أكثر لتصاميم الأقسام",
+              "هيكل صفحات SEO متقدم",
+              "دعم محتوى بالذكاء الاصطناعي",
               "مساحة SSD غير محدودة",
               "50 صندوق بريد أعمال 10GB",
               "إعداد SSL مجاني",
               "نسخ احتياطي للموقع مدمج",
               "دعم ربط النطاق",
-              "فحص البرمجيات الضارة",
-              "حماية DDoS",
               "لا حاجة للوصول إلى الملفات أو الخادم"
             ]
           }
@@ -128,7 +186,7 @@
         {
           "name": {
             "en": "Website Ultimate",
-            "ar": "Website Ultimate"
+            "ar": "باقة موقع Ultimate"
           },
           "priceMonthly": 85,
           "orderUrl": "https://cp.skilledhost.com/domain-required?p=119534-1-lhr&t=36",
@@ -136,29 +194,33 @@
             "en": "Advanced",
             "ar": "متقدمة"
           },
+          "cta": {
+            "en": "Choose Ultimate",
+            "ar": "اختر Ultimate"
+          },
           "features": {
             "en": [
-              "Business Website Included",
-              "Free First-Year Domain",
+              "Everything in Website Pro",
+              "Advanced Website Structure",
+              "More Page and Section Flexibility",
+              "Priority Launch Support",
               "Unlimited SSD Web Space",
               "Unlimited × 10GB Business Mailboxes",
               "Free SSL Setup",
               "Website Backup Included",
               "Domain Connection Support",
-              "Malware Scanning",
-              "DDoS Protection",
               "No File or Server Access Required"
             ],
             "ar": [
-              "موقع أعمال مدمج",
-              "نطاق مجاني للسنة الأولى",
+              "كل ما في باقة موقع Pro",
+              "هيكل موقع متقدم",
+              "مرونة أكبر للصفحات والأقسام",
+              "دعم أولوية عند الإطلاق",
               "مساحة SSD غير محدودة",
               "صناديق بريد أعمال 10GB غير محدودة",
               "إعداد SSL مجاني",
               "نسخ احتياطي للموقع مدمج",
               "دعم ربط النطاق",
-              "فحص البرمجيات الضارة",
-              "حماية DDoS",
               "لا حاجة للوصول إلى الملفات أو الخادم"
             ]
           }
@@ -176,16 +238,58 @@
         "ar": "باقات المتاجر الإلكترونية"
       },
       "description": {
-        "en": "Managed online store packages with product pages, categories, checkout setup, business email, SSL, backup and domain connection support.",
-        "ar": "باقات متاجر إلكترونية مُدارة تشمل صفحات المنتجات، التصنيفات، إعداد الطلب، بريد الأعمال، SSL، النسخ الاحتياطي ودعم ربط النطاق."
+        "en": "Start with a free online store theme and Skilled Host subdomain. Build your store pages, prepare products and categories, use SEO tools and AI-assisted content, then upgrade when you are ready for checkout, domain, email, SSL, backup and support.",
+        "ar": "ابدأ بقالب متجر إلكتروني مجاني ونطاق فرعي من Skilled Host. أنشئ صفحات المتجر، وجهز المنتجات والتصنيفات، واستخدم أدوات SEO ومساعدة المحتوى بالذكاء الاصطناعي، ثم قم بالترقية عندما تكون جاهزاً لإتمام الطلب والنطاق والبريد وSSL والنسخ الاحتياطي والدعم."
       },
       "categoryUrl": "https://cp.skilledhost.com/pccategory?cat=5257",
       "pageUrl": "/online-store-packages",
       "plans": [
         {
           "name": {
+            "en": "Store Free Start",
+            "ar": "بداية مجانية للمتجر"
+          },
+          "priceMonthly": 0,
+          "orderUrl": "#theme-categories",
+          "badge": {
+            "en": "Free Start",
+            "ar": "بداية مجانية"
+          },
+          "cta": {
+            "en": "Start free",
+            "ar": "ابدأ مجاناً"
+          },
+          "features": {
+            "en": [
+              "Free Skilled Host Subdomain",
+              "Professional Store Theme Included",
+              "Store Editor Included",
+              "Flexible Section Variations",
+              "Product Page Layouts",
+              "Category Page Layouts",
+              "SEO-Ready Store Structure",
+              "AI Content Assistant",
+              "Mobile-Ready Store Pages",
+              "Checkout and Custom Domain Not Included"
+            ],
+            "ar": [
+              "نطاق فرعي مجاني من Skilled Host",
+              "قالب متجر احترافي مدمج",
+              "محرر المتجر مدمج",
+              "تصاميم مرنة للأقسام",
+              "تصاميم صفحات المنتجات",
+              "تصاميم صفحات التصنيفات",
+              "هيكل متجر جاهز لمحركات البحث",
+              "مساعد محتوى بالذكاء الاصطناعي",
+              "صفحات متجر متجاوبة مع الجوال",
+              "إتمام الطلب والنطاق الخاص غير مدمجين"
+            ]
+          }
+        },
+        {
+          "name": {
             "en": "Online Store Business",
-            "ar": "Online Store Business"
+            "ar": "باقة متجر Business"
           },
           "priceMonthly": 50,
           "orderUrl": "https://cp.skilledhost.com/domain-required?p=294897-1-lhr&t=36",
@@ -193,37 +297,41 @@
             "en": "Business",
             "ar": "للأعمال"
           },
+          "cta": {
+            "en": "Upgrade to Business",
+            "ar": "الترقية إلى Business"
+          },
           "features": {
             "en": [
-              "Online Store Included",
+              "Everything in Store Free Start",
+              "Checkout Setup Included",
+              "Custom Domain Connection",
               "Free First-Year Domain",
               "Unlimited SSD Web Space",
               "20 × 10GB Business Mailboxes",
               "Product Pages Included",
               "Category Pages Included",
-              "Checkout Setup Included",
               "Free SSL Setup",
-              "Website Backup Included",
-              "No File or Server Access Required"
+              "Website Backup Included"
             ],
             "ar": [
-              "متجر إلكتروني مدمج",
+              "كل ما في البداية المجانية للمتجر",
+              "إعداد الطلب مدمج",
+              "ربط نطاق خاص",
               "نطاق مجاني للسنة الأولى",
               "مساحة SSD غير محدودة",
               "20 صندوق بريد أعمال 10GB",
-              "صفحات منتجات مدمجة",
-              "صفحات تصنيفات مدمجة",
-              "إعداد الطلب مدمج",
+              "صفحات المنتجات مدمجة",
+              "صفحات التصنيفات مدمجة",
               "إعداد SSL مجاني",
-              "نسخ احتياطي للموقع مدمج",
-              "لا حاجة للوصول إلى الملفات أو الخادم"
+              "نسخ احتياطي للموقع مدمج"
             ]
           }
         },
         {
           "name": {
             "en": "Online Store Pro",
-            "ar": "Online Store Pro"
+            "ar": "باقة متجر Pro"
           },
           "priceMonthly": 64,
           "orderUrl": "https://cp.skilledhost.com/domain-required?p=294899-1-lhr&t=36",
@@ -231,37 +339,41 @@
             "en": "Popular",
             "ar": "الأكثر طلباً"
           },
+          "cta": {
+            "en": "Choose Pro",
+            "ar": "اختر Pro"
+          },
           "features": {
             "en": [
-              "Online Store Included",
-              "Free First-Year Domain",
+              "Everything in Online Store Business",
+              "More Store Section Options",
+              "Advanced Store Page Structure",
+              "AI-Assisted Product Content Support",
               "Unlimited SSD Web Space",
               "50 × 10GB Business Mailboxes",
               "Product Pages Included",
               "Category Pages Included",
               "Checkout Setup Included",
-              "Free SSL Setup",
-              "Website Backup Included",
-              "No File or Server Access Required"
+              "Website Backup Included"
             ],
             "ar": [
-              "متجر إلكتروني مدمج",
-              "نطاق مجاني للسنة الأولى",
+              "كل ما في باقة متجر Business",
+              "خيارات أكثر لأقسام المتجر",
+              "هيكل صفحات متجر متقدم",
+              "دعم محتوى المنتجات بالذكاء الاصطناعي",
               "مساحة SSD غير محدودة",
               "50 صندوق بريد أعمال 10GB",
-              "صفحات منتجات مدمجة",
-              "صفحات تصنيفات مدمجة",
+              "صفحات المنتجات مدمجة",
+              "صفحات التصنيفات مدمجة",
               "إعداد الطلب مدمج",
-              "إعداد SSL مجاني",
-              "نسخ احتياطي للموقع مدمج",
-              "لا حاجة للوصول إلى الملفات أو الخادم"
+              "نسخ احتياطي للموقع مدمج"
             ]
           }
         },
         {
           "name": {
             "en": "Online Store Ultimate",
-            "ar": "Online Store Ultimate"
+            "ar": "باقة متجر Ultimate"
           },
           "priceMonthly": 85,
           "orderUrl": "https://cp.skilledhost.com/domain-required?p=294901-1-lhr&t=36",
@@ -269,30 +381,34 @@
             "en": "Advanced",
             "ar": "متقدمة"
           },
+          "cta": {
+            "en": "Choose Ultimate",
+            "ar": "اختر Ultimate"
+          },
           "features": {
             "en": [
-              "Online Store Included",
-              "Free First-Year Domain",
+              "Everything in Online Store Pro",
+              "Advanced Store Structure",
+              "More Product and Category Flexibility",
+              "Priority Launch Support",
               "Unlimited SSD Web Space",
               "Unlimited × 10GB Business Mailboxes",
               "Product Pages Included",
               "Category Pages Included",
               "Checkout Setup Included",
-              "Free SSL Setup",
-              "Website Backup Included",
-              "No File or Server Access Required"
+              "Website Backup Included"
             ],
             "ar": [
-              "متجر إلكتروني مدمج",
-              "نطاق مجاني للسنة الأولى",
+              "كل ما في باقة متجر Pro",
+              "هيكل متجر متقدم",
+              "مرونة أكبر للمنتجات والتصنيفات",
+              "دعم أولوية عند الإطلاق",
               "مساحة SSD غير محدودة",
               "صناديق بريد أعمال 10GB غير محدودة",
-              "صفحات منتجات مدمجة",
-              "صفحات تصنيفات مدمجة",
+              "صفحات المنتجات مدمجة",
+              "صفحات التصنيفات مدمجة",
               "إعداد الطلب مدمج",
-              "إعداد SSL مجاني",
-              "نسخ احتياطي للموقع مدمج",
-              "لا حاجة للوصول إلى الملفات أو الخادم"
+              "نسخ احتياطي للموقع مدمج"
             ]
           }
         }
@@ -309,8 +425,8 @@
         "ar": "خطط استضافة المواقع"
       },
       "description": {
-        "en": "Reliable hosting for business websites, landing pages, portfolios, blogs and company profiles.",
-        "ar": "استضافة موثوقة لمواقع الشركات والصفحات التعريفية والمعارض الرقمية والمدونات."
+        "en": "Reliable paid hosting for existing websites, landing pages, portfolios, blogs and company profiles that need direct hosting access.",
+        "ar": "استضافة مدفوعة وموثوقة للمواقع الحالية والصفحات التعريفية والمعارض الرقمية والمدونات التي تحتاج إلى وصول مباشر للاستضافة."
       },
       "categoryUrl": "https://cp.skilledhost.com/pccategory?cat=5191",
       "pageUrl": "/web-hosting",
@@ -478,8 +594,8 @@
         "ar": "خطط استضافة ووردبريس"
       },
       "description": {
-        "en": "Managed WordPress hosting for fast, secure and professional websites, blogs and online projects.",
-        "ar": "استضافة ووردبريس مُدارة لمواقع ومدونات ومشاريع إلكترونية سريعة وآمنة واحترافية."
+        "en": "Optimised paid hosting for WordPress websites, blogs, company pages and content platforms that need WordPress-ready performance and support.",
+        "ar": "استضافة مدفوعة ومحسّنة لمواقع ووردبريس والمدونات وصفحات الشركات ومنصات المحتوى التي تحتاج أداء ودعماً مناسباً لووردبريس."
       },
       "categoryUrl": "https://cp.skilledhost.com/pccategory?cat=5193",
       "pageUrl": "/wordpress-hosting",
@@ -551,7 +667,7 @@
               "نقل بيانات غير محدود",
               "20 صندوق بريد 10GB",
               "شهادات SSL مجانية",
-              "أدوات staging لووردبريس",
+              "أدوات Staging لووردبريس",
               "نسخ احتياطي يومي",
               "فحص البرمجيات الضارة",
               "إدارة ووردبريس سهلة"
@@ -589,7 +705,7 @@
               "نقل بيانات غير محدود",
               "50 صندوق بريد 10GB",
               "شهادات SSL مجانية",
-              "أدوات staging لووردبريس",
+              "أدوات Staging لووردبريس",
               "دخول SSH",
               "دخول Remote MySQL",
               "نسخ احتياطي زمني مدمج"
@@ -627,7 +743,7 @@
               "نقل بيانات غير محدود",
               "صناديق بريد 10GB غير محدودة",
               "شهادات SSL مجانية",
-              "أدوات staging لووردبريس",
+              "أدوات Staging لووردبريس",
               "دخول SSH",
               "أدوات إدارة ووردبريس متقدمة",
               "نسخ احتياطي زمني مدمج"
@@ -647,8 +763,8 @@
         "ar": "خطط استضافة ويندوز"
       },
       "description": {
-        "en": "Windows-based hosting for websites and applications that need Microsoft hosting support.",
-        "ar": "استضافة بنظام ويندوز للمواقع والتطبيقات التي تحتاج إلى دعم استضافة Microsoft."
+        "en": "Paid Windows-based hosting for websites and projects that need Microsoft technology support or Windows-compatible hosting requirements.",
+        "ar": "استضافة مدفوعة مبنية على ويندوز للمواقع والمشاريع التي تحتاج دعم تقنيات مايكروسوفت أو استضافة متوافقة مع ويندوز."
       },
       "categoryUrl": "https://cp.skilledhost.com/pccategory?cat=5197",
       "pageUrl": "/windows-hosting",
@@ -818,8 +934,8 @@
         "ar": "خطط بريد الأعمال"
       },
       "description": {
-        "en": "Professional business email using your own domain name, with secure mailbox hosting, webmail access and migration options.",
-        "ar": "بريد أعمال احترافي باستخدام اسم نطاقك الخاص مع استضافة بريد آمنة، دخول Webmail وخيارات نقل البريد."
+        "en": "Professional email using your business domain, with secure mailbox hosting, webmail access, email app support, spam protection and migration help.",
+        "ar": "بريد احترافي باستخدام نطاق عملك، مع استضافة بريد آمنة، دخول Webmail، دعم تطبيقات البريد، حماية من الرسائل المزعجة ومساعدة في النقل."
       },
       "categoryUrl": "https://cp.skilledhost.com/pccategory?cat=4737",
       "pageUrl": "/business-email",
