@@ -4110,116 +4110,107 @@ html[data-theme="dark"] .how-launch-note span {
 
 /* =========================================================
    08) HELP ME CHOOSE
-   Updated service selector after Website + Store packages
+   Smart advisor cards - compact and different from workflow sections
    ========================================================= */
 
 .choose-section {
+  position: relative;
+  overflow: hidden;
   background: var(--sh-surface);
   border-top: 1px solid var(--sh-border);
   border-bottom: 1px solid var(--sh-border);
 }
 
-.choose-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 42px;
-  align-items: start;
-}
-
-.choose-content {
-  max-width: 600px;
-}
-
-.choose-content h2 {
-  max-width: 680px;
-}
-
-.choose-content p {
-  max-width: 640px;
-  margin-bottom: 0;
-}
-
-.choose-note {
-  display: grid;
-  gap: 4px;
-  margin-top: 22px;
-  padding: 18px 20px;
-  color: var(--sh-text);
-  background: var(--sh-page);
-  border: 1px solid var(--sh-border);
-  border-radius: var(--sh-radius-md);
-}
-
-.choose-note strong {
-  color: var(--sh-heading);
-  font-size: 14px;
-  font-weight: 900;
-}
-
-.choose-note span {
-  color: var(--sh-muted);
-  font-size: 14px;
-  line-height: 1.65;
-}
-
-.choice-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.choose-section .choice-item {
+.choose-section .container {
   position: relative;
+  z-index: 1;
+}
+
+.choose-smart-head {
+  max-width: 900px;
+  margin-bottom: 34px;
+}
+
+.choose-smart-head h2 {
+  max-width: 850px;
+  margin-bottom: 16px;
+  color: var(--sh-heading);
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.choose-smart-head p:last-child {
+  max-width: 760px;
+  margin-bottom: 0;
+  color: var(--sh-muted);
+  font-size: 16.4px;
+  line-height: 1.76;
+}
+
+.choose-smart-grid {
   display: grid;
-  grid-template-columns: 46px minmax(0, 1fr);
-  align-items: center;
-  gap: 14px;
-  min-height: 98px;
-  padding: 18px 44px 18px 18px;
-  color: var(--sh-text);
+  grid-template-columns: 1.08fr 0.96fr 0.96fr;
+  gap: 18px;
+}
+
+.choose-smart-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+  padding: 28px;
+  overflow: hidden;
   background: var(--sh-page);
   border: 1px solid var(--sh-border);
-  border-radius: var(--sh-radius-md);
-  text-decoration: none;
-  transition:
-    border-color 0.18s ease,
-    box-shadow 0.18s ease,
-    transform 0.18s ease,
-    background-color 0.18s ease;
+  border-radius: 26px;
+  box-shadow: 0 14px 34px rgba(7, 26, 61, 0.055);
 }
 
-.choose-section .choice-item::after {
-  content: "→";
+.choose-smart-card::before {
+  content: "";
   position: absolute;
-  inset-inline-end: 18px;
-  top: 50%;
-  color: var(--sh-orange);
-  font-size: 16px;
-  font-weight: 900;
-  line-height: 1;
-  opacity: 0;
-  transform: translateY(-50%);
-  transition:
-    opacity 0.18s ease,
-    inset-inline-end 0.18s ease;
+  inset-inline: 0;
+  top: 0;
+  height: 4px;
+  background: transparent;
 }
 
-.choose-section .choice-icon {
+.choose-smart-card-featured {
+  background:
+    linear-gradient(180deg, rgba(255, 107, 0, 0.055), rgba(255, 107, 0, 0)),
+    var(--sh-page);
+  border-color: rgba(255, 107, 0, 0.28);
+}
+
+.choose-smart-card-featured::before {
+  background: var(--sh-orange);
+}
+
+.choose-smart-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.choose-smart-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 46px;
-  min-width: 46px;
-  height: 46px;
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
   color: var(--sh-navy);
-  background: #fff4ec;
-  border: 1px solid #ffd8bd;
-  border-radius: 14px;
+  background: #fff5ee;
+  border: 1px solid rgba(255, 107, 0, 0.24);
+  border-radius: 16px;
 }
 
-.choose-section .choice-icon svg {
-  width: 22px;
-  height: 22px;
+.choose-smart-icon svg {
+  width: 23px;
+  height: 23px;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.9;
@@ -4227,164 +4218,253 @@ html[data-theme="dark"] .how-launch-note span {
   stroke-linejoin: round;
 }
 
-.choose-section .choice-icon-wordpress svg {
-  stroke-width: 1.7;
+.choose-smart-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 7px 10px;
+  color: var(--sh-orange);
+  background: rgba(255, 107, 0, 0.065);
+  border: 1px solid rgba(255, 107, 0, 0.18);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 950;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
-.choose-section .choice-text {
-  display: grid;
-  gap: 5px;
-  min-width: 0;
-}
-
-.choose-section .choice-text > span {
-  color: var(--sh-muted);
-  font-size: 13.5px;
-  line-height: 1.5;
-}
-
-.choose-section .choice-text strong {
+.choose-smart-card h3 {
+  max-width: 420px;
+  margin: 0 0 12px;
   color: var(--sh-heading);
-  font-size: 15.5px;
-  font-weight: 900;
-  line-height: 1.3;
-  white-space: normal;
+  font-size: clamp(24px, 2.25vw, 32px);
+  font-weight: 950;
+  line-height: 1.14;
+  letter-spacing: -0.024em;
 }
 
-.choose-section .choice-item:hover,
-.choose-section .choice-item:focus-visible {
+.choose-smart-card p {
+  margin: 0 0 24px;
+  color: var(--sh-muted);
+  font-size: 14.5px;
+  line-height: 1.68;
+}
+
+.choose-smart-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: auto;
+}
+
+.choose-smart-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 14px;
+  color: var(--sh-heading);
   background: var(--sh-surface);
-  border-color: rgba(255, 107, 0, 0.55);
-  box-shadow: var(--sh-shadow-sm);
-  transform: translateY(-2px);
+  border: 1px solid var(--sh-border);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 950;
+  line-height: 1;
+  white-space: nowrap;
+  transition:
+    color 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
 }
 
-.choose-section .choice-item:hover::after,
-.choose-section .choice-item:focus-visible::after {
-  opacity: 1;
-  inset-inline-end: 14px;
-}
-
-.choose-section .choice-item:hover .choice-text strong,
-.choose-section .choice-item:focus-visible .choice-text strong {
+.choose-smart-actions a:hover,
+.choose-smart-actions a:focus-visible {
   color: var(--sh-orange);
+  border-color: rgba(255, 107, 0, 0.5);
+  transform: translateY(-1px);
 }
 
-.choose-section .choice-item:hover .choice-icon,
-.choose-section .choice-item:focus-visible .choice-icon {
-  color: var(--sh-orange);
-  border-color: rgba(255, 107, 0, 0.42);
+.choose-smart-help {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  margin-top: 18px;
+  padding: 18px 20px;
+  background: var(--sh-navy);
+  border-radius: 22px;
 }
 
-html[dir="rtl"] .choose-section .choice-item {
-  padding: 18px 18px 18px 44px;
+.choose-smart-help p {
+  max-width: 760px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  line-height: 1.6;
 }
 
-html[dir="rtl"] .choose-section .choice-item::after {
-  content: "←";
+.choose-smart-help .btn {
+  flex-shrink: 0;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.075);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
-html[dir="rtl"] .choose-section .choice-item:hover::after,
-html[dir="rtl"] .choose-section .choice-item:focus-visible::after {
-  inset-inline-end: 14px;
+.choose-smart-help .btn:hover {
+  color: #ffffff;
+  border-color: rgba(255, 107, 0, 0.72);
 }
 
+/* RTL */
+html[dir="rtl"] .choose-section {
+  direction: rtl;
+}
+
+html[dir="rtl"] .choose-smart-head,
+html[dir="rtl"] .choose-smart-card,
+html[dir="rtl"] .choose-smart-help {
+  text-align: right;
+}
+
+html[dir="rtl"] .choose-smart-head h2,
+html[dir="rtl"] .choose-smart-card h3 {
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] .choose-smart-label {
+  letter-spacing: 0;
+}
+
+/* Dark mode */
 html[data-theme="dark"] .choose-section {
+  background: var(--sh-page);
+}
+
+html[data-theme="dark"] .choose-smart-card,
+html[data-theme="dark"] .choose-smart-card-featured {
   background: var(--sh-surface);
-}
-
-html[data-theme="dark"] .choose-note {
-  background: rgba(255, 255, 255, 0.035);
-  border-color: var(--sh-border);
-}
-
-html[data-theme="dark"] .choose-section .choice-item {
-  background: rgba(255, 255, 255, 0.035);
   border-color: var(--sh-border);
   box-shadow: none;
 }
 
-html[data-theme="dark"] .choose-section .choice-icon {
+html[data-theme="dark"] .choose-smart-card-featured::before {
+  background: var(--sh-orange);
+}
+
+html[data-theme="dark"] .choose-smart-icon {
   color: #ffffff;
   background: rgba(255, 107, 0, 0.12);
   border-color: rgba(255, 107, 0, 0.28);
 }
 
-html[data-theme="dark"] .choose-section .choice-item:hover,
-html[data-theme="dark"] .choose-section .choice-item:focus-visible {
-  background: rgba(255, 255, 255, 0.055);
-  border-color: rgba(255, 107, 0, 0.65);
-  box-shadow: none;
+html[data-theme="dark"] .choose-smart-label {
+  background: rgba(255, 107, 0, 0.10);
+  border-color: rgba(255, 107, 0, 0.24);
 }
 
-@media (max-width: 980px) {
-  .choose-grid {
+html[data-theme="dark"] .choose-smart-actions a {
+  background: rgba(255, 255, 255, 0.035);
+  border-color: var(--sh-border);
+}
+
+html[data-theme="dark"] .choose-smart-actions a:hover,
+html[data-theme="dark"] .choose-smart-actions a:focus-visible {
+  border-color: rgba(255, 107, 0, 0.58);
+}
+
+html[data-theme="dark"] .choose-smart-help {
+  background: #071326;
+  border: 1px solid var(--sh-border);
+}
+
+/* Responsive */
+@media (max-width: 1180px) {
+  .choose-smart-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
   }
 
-  .choose-content {
-    max-width: 760px;
-  }
-
-  .choose-content p {
-    max-width: 760px;
+  .choose-smart-card {
+    min-height: auto;
   }
 }
 
 @media (max-width: 760px) {
-  .choice-list {
+  .choose-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .choose-smart-head {
+    margin-bottom: 28px;
+    text-align: center;
+  }
+
+  .choose-smart-head h2 {
+    font-size: clamp(31px, 8vw, 43px);
+    line-height: 1.13;
+  }
+
+  .choose-smart-head p:last-child {
+    font-size: 15.5px;
+    line-height: 1.76;
+  }
+
+  .choose-smart-card {
+    padding: 24px 22px;
+    border-radius: 22px;
+  }
+
+  .choose-smart-top {
+    margin-bottom: 22px;
+  }
+
+  .choose-smart-card h3 {
+    font-size: clamp(22px, 6vw, 30px);
+  }
+
+  .choose-smart-actions {
+    display: grid;
     grid-template-columns: 1fr;
   }
 
-  .choose-section .choice-item {
-    min-height: 88px;
-    padding: 16px 42px 16px 16px;
+  .choose-smart-actions a {
+    width: 100%;
+    min-height: 46px;
   }
 
-  html[dir="rtl"] .choose-section .choice-item {
-    padding: 16px 16px 16px 42px;
-  }
-}
-
-@media (max-width: 560px) {
-  .choose-section .choice-item {
-    grid-template-columns: 42px minmax(0, 1fr);
-    gap: 12px;
-    min-height: 84px;
-    padding: 15px 38px 15px 15px;
-    border-radius: 15px;
+  .choose-smart-help {
+    display: grid;
+    gap: 16px;
+    text-align: center;
+    padding: 20px;
   }
 
-  html[dir="rtl"] .choose-section .choice-item {
-    padding: 15px 15px 15px 38px;
+  .choose-smart-help .btn {
+    width: 100%;
+    min-height: 48px;
   }
 
-  .choose-section .choice-icon {
-    width: 42px;
-    min-width: 42px;
-    height: 42px;
-    border-radius: 13px;
-  }
-
-  .choose-section .choice-icon svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .choose-section .choice-text > span {
-    font-size: 13px;
-  }
-
-  .choose-section .choice-text strong {
-    font-size: 15px;
-  }
-
-  .choose-note {
-    padding: 16px;
+  html[dir="rtl"] .choose-smart-head,
+  html[dir="rtl"] .choose-smart-help {
+    text-align: center;
   }
 }
 
+@media (max-width: 420px) {
+  .choose-section {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .choose-smart-card {
+    padding: 22px 20px;
+  }
+
+  .choose-smart-card h3 {
+    font-size: 24px;
+  }
+}
 
 /* =========================================================
    09) WHY SKILLED HOST
